@@ -1,3 +1,4 @@
+![Switch](https://user-images.githubusercontent.com/149442/127568538-558bc9fa-3180-4bbb-8637-c514df976ffe.png)
 
 We like to go fast. We offer 100G internet exchange ports at self-cost for anyone that wishes to peer.
 
