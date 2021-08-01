@@ -6,4 +6,4 @@ We are present at these locations:
 
  - [Kista Gate, Stockholm](https://www.peeringdb.com/fac/5544).
 
-You can find our IXP manager [here](https://sonix.network/).
+You can find our IXP manager [here](https://manager.sonix.network/).
