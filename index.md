@@ -9,3 +9,5 @@ We are present at these locations:
 You can find our IXP manager [here](https://manager.sonix.network/).
 
 The rules are available [here](rules.md).
+
+IF you are looking for the operations documentation, you can [find it here](ops.md).
