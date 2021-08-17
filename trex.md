@@ -32,7 +32,12 @@ You will need to set up two major things:
  
 For the destination MAC you can pick one of your routers connected to SONIX,
 e.g. MAINFRAME-NET is `76:c0:f8:4b:c8:5d` and you are most welcome to use it
-for reasonable testing.
+for reasonable testing. You also need to configure static ARP or neighbor
+on the remote side, like this:
+
+```
+ip -6 neigh add 2a0a:d984::ff lladdr 00:50:56:85:e1:8d dev Ethernet124
+```
 
 The STL script is where you define what kind of traffic to send.
 The trex-core repository [has a number of examples](https://github.com/cisco-system-traffic-generator/trex-core/tree/master/scripts/stl)
