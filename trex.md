@@ -36,7 +36,7 @@ for reasonable testing. You also need to configure static ARP or neighbor
 on the remote side, like this:
 
 ```
-ip -6 neigh add 2a0a:d984::ff lladdr 00:50:56:85:e1:8d dev Ethernet124
+ip -6 neigh add 2a0a:d984::ff lladdr 00:50:56:85:e6:a4 dev Ethernet124
 ```
 
 The STL script is where you define what kind of traffic to send.
