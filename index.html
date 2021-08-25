@@ -115,7 +115,7 @@ var myChart = new Chart(ctx1, {
     plugins: {
       'datasource-prometheus': {
         prometheus: {
-          endpoint: "https://prometheus.demo.do.prometheus.io",
+          endpoint: "https://metric.sonix.network",
           baseURL: "/api/v1",   // default value
         },
         findInLabelMap: foobar,
@@ -143,11 +143,11 @@ var myChart = new Chart(ctx2, {
     plugins: {
       'datasource-prometheus': {
         prometheus: {
-          endpoint: "https://prometheus.demo.do.prometheus.io",
+          endpoint: "https://metric.sonix.network",
           baseURL: "/api/v1",   // default value
         },
         findInLabelMap: foobar,
-        query: 'sum by (job) (go_gc_duration_seconds)',
+        query: 'sum by (job) (go_goroutines)',
         timeRange: {
           type: 'relative',
 
