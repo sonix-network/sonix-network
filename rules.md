@@ -17,7 +17,7 @@ If a member shows a willful disregard for the IX service rules they will be disc
 
  * Only unicast frames with defined source MAC-address are allowed, with the exception of neighbor discovery mechanisms
  * For all traffic, the following rules apply:
-   * Frame sizes upto (MTU) 1500 is allowed
+   * Frame sizes upto (MTU) 9000 is allowed
    * Only Ethernet frame types IPv4 (0x0800), IPv6 (0x86dd) and ARP (0x0806) are allowed
  * For intra-IX* traffic, the following rules apply in addition to the above:
    * Traffic destined to the IX subnet must be sourced from the IX subnet
