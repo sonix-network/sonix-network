@@ -83,7 +83,7 @@
     <div class="row align-items-md-stretch">
 <div class="col-lg-6 mt-4">
 <div class="h-100 p-2 bg-white rounded-3 shadow border">
-<h5>Placeholder Graph #1</h5>
+<h5>Port Bandwidth [bit/s]</h5>
 <canvas class="graph" id="ctx1"></canvas>
 </div>
 </div>
@@ -104,65 +104,87 @@
   </div></main>
 
 <script>
+  function job(m) {
+      return m.labels.job
+    }
 
-function foobar(m) {
-  return m.labels.job
-}
 
-var myChart = new Chart(ctx1, {
-  type: 'line',
-  plugins: [ChartDatasourcePrometheusPlugin],
-  options: {
-    animation: {
-      duration: 0,
-    },
-    plugins: {
-      'datasource-prometheus': {
-        prometheus: {
-          endpoint: "https://metric.sonix.network",
-          baseURL: "/api/v1",   // default value
+  function interface(m) {
+      return m.labels.interface
+    }
+
+  var myChart = new Chart(ctx1, {
+      type: 'line',
+      plugins: [ChartDatasourcePrometheusPlugin],
+      options: {
+          animation: {
+              duration: 0,
+            },
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      // Include a dollar sign in the ticks
+                      callback: function(value, index, values) {
+                          return value + ' bit/s';
+                        }
+                    }
+                }],
+              xAxes: [{
+                  type: 'time',
+                  time: {
+                      unit: 'hour',
+                      displayFormats: {
+                          hour: 'HH:mm'
+                        }
+                    }
+                }]
+            },
+          plugins: {
+              'datasource-prometheus': {
+                  prometheus: {
+                      endpoint: "https://metric.sonix.network",
+                      baseURL: "/api/v1",   // default value
+                    },
+                  findInLabelMap: interface,
+                  query: '(irate(sai_port_in_packet_size_bytes_sum[10m]) + irate(sai_port_out_packet_size_bytes_sum[10m]))*8 and topk(5, rate(sai_port_out_packet_size_bytes_sum[1h]) + rate(sai_port_in_packet_size_bytes_sum[1h])) > 0',
+                  timeRange: {
+                      type: 'relative',
+
+                      // from 12 hours ago to now
+                      start: -12 * 60 * 60 * 1000,
+                      end: 0,
+                    },
+                },
+            },
         },
-        findInLabelMap: foobar,
-        query: 'sum by (job) (go_gc_duration_seconds)',
-        timeRange: {
-          type: 'relative',
+    });
 
-          // from 12 hours ago to now
-          start: -12 * 60 * 60 * 1000,
-          end: 0,
+  var myChart = new Chart(ctx2, {
+      type: 'line',
+      plugins: [ChartDatasourcePrometheusPlugin],
+      options: {
+          animation: {
+              duration: 0,
+            },
+          plugins: {
+              'datasource-prometheus': {
+                  prometheus: {
+                      endpoint: "https://metric.sonix.network",
+                      baseURL: "/api/v1",   // default value
+                    },
+                  findInLabelMap: job,
+                  query: 'sum by (job) (go_goroutines)',
+                  timeRange: {
+                      type: 'relative',
+
+                      // from 12 hours ago to now
+                      start: -12 * 60 * 60 * 1000,
+                      end: 0,
+                    },
+                },
+            },
         },
-      },
-    },
-  },
-});
-
-
-var myChart = new Chart(ctx2, {
-  type: 'line',
-  plugins: [ChartDatasourcePrometheusPlugin],
-  options: {
-    animation: {
-      duration: 0,
-    },
-    plugins: {
-      'datasource-prometheus': {
-        prometheus: {
-          endpoint: "https://metric.sonix.network",
-          baseURL: "/api/v1",   // default value
-        },
-        findInLabelMap: foobar,
-        query: 'sum by (job) (go_goroutines)',
-        timeRange: {
-          type: 'relative',
-
-          // from 12 hours ago to now
-          start: -12 * 60 * 60 * 1000,
-          end: 0,
-        },
-      },
-    },
-  },
-});
+    });
 
 </script>
 </body>
