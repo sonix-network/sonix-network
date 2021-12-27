@@ -34,15 +34,15 @@
 
     <div class="p-5 bg-light rounded-3 shadow">
       <div class="container-fluid py-5">
-           <h1 class="display-5 fw-bold">Open Internet Exchange for Everybody</h1>
-           <h5 class="fw-bold">Technical Preview / Alpha</h5>
-<div class="clearfix">
+        <h1 class="display-5 fw-bold">Open Internet Exchange for Everybody</h1>
+        <h5 class="fw-bold">Technical Preview / Alpha</h5>
+        <div class="clearfix">
           <img src="sonix-kg1-small.jpg" alt="Switch" class="col-lg-6 float-md-end mb-3 ms-md-3 img-fluid img-thumbnail" style="width:500px;">
-        <p class="col-lg-8 fs-5">SONIX strives to be an IXP built on as much open technologies and project as possible.</p>
-  <p class="col-lg-8 fs-5">Founded by a non-profit, SONIX will live as a community driven IXP. If you have an idea where SONIX can help out - reach out!</p>
-  <p class="col-lg-8 fs-5">Currently SONIX is in a research & early adopters phase. We are eager to allow peering with folks who can handle some churn while we work out how the IXP will look like in the long run.</p>
+          <p class="col-lg-8 fs-5">SONIX strives to be an IXP built on as much open technologies and project as possible.</p>
+          <p class="col-lg-8 fs-5">Founded by a non-profit, SONIX will live as a community driven IXP. If you have an idea where SONIX can help out - reach out!</p>
+          <p class="col-lg-8 fs-5">Currently SONIX is in a research & early adopters phase. We are eager to allow peering with folks who can handle some churn while we work out how the IXP will look like in the long run.</p>
+        </div>
       </div>
-    </div>
     </div>
 
     <div class="row align-items-md-stretch">
@@ -51,18 +51,18 @@
           <h2>Presence</h2>
           <p>We are a young IXP still getting established, but right now we are present at the following locations.</p>
           <ul>
-             <li><a class="link-light" href="https://www.peeringdb.com/fac/5544">Kista Gate, Stockholm</a></li>
-             <li><a class="link-light" href="https://www.peeringdb.com/fac/1053">KN7, Stockholm</a> (planned)</li>
+            <li><a class="link-light" href="https://www.peeringdb.com/fac/5544">Kista Gate, Stockholm</a></li>
+            <li><a class="link-light" href="https://www.peeringdb.com/fac/1053">KN7, Stockholm</a> (planned)</li>
           </ul>
         </div>
       </div>
       <div class="col-lg-5 mt-4">
         <div class="h-100 p-5 bg-light rounded-3 shadow">
           <h2>An open and green IXP</h2>
-        <p>Even now in the early days of the IXP, the core switches run the open-source NOS <a href="https://azure.github.io/SONiC/">SONiC</a>
-        on self-refurbished hardware that otherwise would have become e-waste.
-        </p>
-        <p>It is in this way we believe SONIX can both push innovation as well as being environmentally friendly.</p>
+          <p>Even now in the early days of the IXP, the core switches run the open-source NOS <a href="https://azure.github.io/SONiC/">SONiC</a>
+          on self-refurbished hardware that otherwise would have become e-waste.
+          </p>
+          <p>It is in this way we believe SONIX can both push innovation as well as being environmentally friendly.</p>
         </div>
       </div>
 
@@ -70,122 +70,38 @@
         <div class="h-100 p-5 text-white bg-secondary rounded-3 shadow">
           <h2>Resources</h2>
           <p>Hand picked links to resources that are exactly what you are looking for.</a>
-          <ul>
-             <li><a class="link-light" href="https://peeringdb.com/ix/3607">PeeringDB</a></li>
-             <li><a class="link-light" href="https://manager.sonix.network/">IXP Manager</a></li>
-             <li>SONIX <a class="link-light" href="https://sonix.network/rules.html">rules</a></li>
-             <li>Operations <a class="link-light" href="https://sonix.network/ops.html">manual</a></li>
-          </ul>
+        <ul>
+          <li><a class="link-light" href="https://peeringdb.com/ix/3607">PeeringDB</a></li>
+          <li><a class="link-light" href="https://manager.sonix.network/">IXP Manager</a></li>
+          <li>SONIX <a class="link-light" href="https://sonix.network/rules.html">rules</a></li>
+          <li>Operations <a class="link-light" href="https://sonix.network/ops.html">manual</a></li>
+        </ul>
         </div>
       </div>
     </div>
 
     <div class="row align-items-md-stretch">
-<div class="col-lg-6 mt-4">
-<div class="h-100 p-2 bg-white rounded-3 shadow border">
-<h5>Port Bandwidth [bit/s]</h5>
-<canvas class="graph" id="ctx1"></canvas>
-</div>
-</div>
+      <div class="col-lg-6 mt-4">
+        <div class="h-100 p-2 bg-white rounded-3 shadow border">
+          <h5>Port Bandwidth [bits/s]</h5>
+          <canvas class="graph" id="ctx1"></canvas>
+        </div>
+      </div>
 
-<div class="col-lg-6 mt-4">
-<div class="h-100 p-2 bg-white rounded-3 shadow border">
-<h5>Placeholder Graph #2</h5>
-<canvas class="graph" id="ctx2"></canvas>
-</div>
-</div>
+      <div class="col-lg-6 mt-4">
+        <div class="h-100 p-2 bg-white rounded-3 shadow border">
+          <h5>Placeholder Graph #2</h5>
+          <canvas class="graph" id="ctx2"></canvas>
+        </div>
+      </div>
 
-</div>
-
-
+    </div>
     <footer class="pt-3 mt-4 text-muted border-top">
       Contact: <a href="https://github.com/kamelnetworks/sonix-network">GitHub</a>
     </footer>
-  </div></main>
-
-<script>
-  function job(m) {
-      return m.labels.job
-    }
-
-
-  function interface(m) {
-      return m.labels.interface
-    }
-
-  var myChart = new Chart(ctx1, {
-      type: 'line',
-      plugins: [ChartDatasourcePrometheusPlugin],
-      options: {
-          animation: {
-              duration: 0,
-            },
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      // Include a dollar sign in the ticks
-                      callback: function(value, index, values) {
-                          return value + ' bit/s';
-                        }
-                    }
-                }],
-              xAxes: [{
-                  type: 'time',
-                  time: {
-                      unit: 'hour',
-                      displayFormats: {
-                          hour: 'HH:mm'
-                        }
-                    }
-                }]
-            },
-          plugins: {
-              'datasource-prometheus': {
-                  prometheus: {
-                      endpoint: "https://metric.sonix.network",
-                      baseURL: "/api/v1",   // default value
-                    },
-                  findInLabelMap: interface,
-                  query: '(irate(sai_port_in_packet_size_bytes_sum[10m]) + irate(sai_port_out_packet_size_bytes_sum[10m]))*8 and topk(5, rate(sai_port_out_packet_size_bytes_sum[1h]) + rate(sai_port_in_packet_size_bytes_sum[1h])) > 0',
-                  timeRange: {
-                      type: 'relative',
-
-                      // from 12 hours ago to now
-                      start: -12 * 60 * 60 * 1000,
-                      end: 0,
-                    },
-                },
-            },
-        },
-    });
-
-  var myChart = new Chart(ctx2, {
-      type: 'line',
-      plugins: [ChartDatasourcePrometheusPlugin],
-      options: {
-          animation: {
-              duration: 0,
-            },
-          plugins: {
-              'datasource-prometheus': {
-                  prometheus: {
-                      endpoint: "https://metric.sonix.network",
-                      baseURL: "/api/v1",   // default value
-                    },
-                  findInLabelMap: job,
-                  query: 'sum by (job) (go_goroutines)',
-                  timeRange: {
-                      type: 'relative',
-
-                      // from 12 hours ago to now
-                      start: -12 * 60 * 60 * 1000,
-                      end: 0,
-                    },
-                },
-            },
-        },
-    });
-
-</script>
+  </div>
+</main>
+<script src="format-si.js"></script>
+<script src="charts.js"></script>
 </body>
 </html>
