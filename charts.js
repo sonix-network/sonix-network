@@ -52,7 +52,7 @@ new Chart(ctx1, {
           baseURL: "/api/v1",   // default value
         },
         findInLabelMap: interface,
-        query: '(irate(sai_port_in_packet_size_bytes_sum[10m]) + irate(sai_port_out_packet_size_bytes_sum[10m]))*8 and topk(5, rate(sai_port_out_packet_size_bytes_sum[1h]) + rate(sai_port_in_packet_size_bytes_sum[1h])) > 0',
+        query: '(rate(sai_port_in_packet_size_bytes_sum[10m]) + rate(sai_port_out_packet_size_bytes_sum[10m]))*8 and topk(5, rate(sai_port_out_packet_size_bytes_sum[1h]) + rate(sai_port_in_packet_size_bytes_sum[1h])) > 0',
         timeRange: {
           type: 'relative',
 
