@@ -5,7 +5,7 @@ Version: 1.0
  * At least one physical on-net link with SONIX equipment
  * ASN assigned by RIR
  * Settlement-free peering only; to exchange paid services between members that depends on SONIX is not allowed
- * Members are not allowed to use the IX to exchange intra-organizon traffic.
+ * Members are not allowed to use the IX to exchange intra-organization traffic.
  * Members are only allowed to exchange traffic targeting the [Default-free zone](https://en.wikipedia.org/wiki/Default-free_zone) (DFZ)
  * Members must avoid actions that significantly risk overloading the IX service or other members.
  * Members must avoid actions that can cause mis-direction of traffic
