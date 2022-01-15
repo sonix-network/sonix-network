@@ -19,6 +19,7 @@ new Chart(ctx1, {
   type: 'line',
   plugins: [ChartDatasourcePrometheusPlugin],
   options: {
+    maintainAspectRatio: false,
     tooltips: {
       callbacks: {
         label: bitsLabelCallback
@@ -53,33 +54,6 @@ new Chart(ctx1, {
         },
         findInLabelMap: interface,
         query: '(rate(sai_port_in_packet_size_bytes_sum[10m]) + rate(sai_port_out_packet_size_bytes_sum[10m]))*8 and topk(5, rate(sai_port_out_packet_size_bytes_sum[1h]) + rate(sai_port_in_packet_size_bytes_sum[1h])) > 0',
-        timeRange: {
-          type: 'relative',
-
-          // from 12 hours ago to now
-          start: -12 * 60 * 60 * 1000,
-          end: 0,
-        },
-      },
-    },
-  },
-});
-
-new Chart(ctx2, {
-  type: 'line',
-  plugins: [ChartDatasourcePrometheusPlugin],
-  options: {
-    animation: {
-      duration: 0,
-    },
-    plugins: {
-      'datasource-prometheus': {
-        prometheus: {
-          endpoint: "https://metric.sonix.network",
-          baseURL: "/api/v1",   // default value
-        },
-        findInLabelMap: job,
-        query: 'sum by (job) (go_goroutines)',
         timeRange: {
           type: 'relative',
 
