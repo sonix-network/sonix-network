@@ -41,6 +41,7 @@ var tippyEdge = null;
         placement: 'bottom',
         hideOnClick: false,
         sticky: "reference",
+        zIndex: 10,
 
         // if interactive:
         interactive: true,
@@ -71,6 +72,10 @@ var tippyEdge = null;
     makeTippy(cy.getElementById('node-kg'), 'Kista Gate').show();
     makeTippy(cy.getElementById('node-kn7'), 'KN7').show();
   });
+
+  cy.on('mouseup', function (e) {
+    cy.fit(null, 50);
+  })
 })();
 
 window.onresize = function() {
