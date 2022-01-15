@@ -1,0 +1,8 @@
+weight: 1
+name: "An green IXP"
+icon: "fas fa-leaf"
+url: ""
+description: |
+  Even now in the early days of the IXP, the core switches run the open-source NOS SONiC on self-refurbished hardware that otherwise would have become e-waste.
+
+  It is in this way we believe SONIX can both push innovation as well as being environmentally friendly.
