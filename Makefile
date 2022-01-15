@@ -3,5 +3,7 @@ push:
 	hugo
 	echo -n 'sonix.network' > public/CNAME
 	git add public
-	git commit -m 'Generate new site'
-	git subtree push --prefix public origin gh-pages
+	git commit -m 'Generate new site' || true
+	git branch -D gh-pages || true
+	git subtree split --prefix public -b gh-pages
+	git push -f origin gh-pages:gh-pages
