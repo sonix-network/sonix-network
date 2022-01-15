@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SONIX</title>
+    <link>https://sonix.network/</link>
+    <description>Recent content on SONIX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://sonix.network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://sonix.network/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sonix.network/contact/</guid>
+      <description>We are a community! Join us in the Matrix room #sonix:kamel.network.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://sonix.network/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sonix.network/faq/</guid>
+      <description>TODO!</description>
+    </item>
+    
+    <item>
+      <title>Rules</title>
+      <link>https://sonix.network/rules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sonix.network/rules/</guid>
+      <description>Version: 1.0
+General requirements  At least one physical on-net link with SONIX equipment ASN assigned by RIR Settlement-free peering only; to exchange paid services between members that depends on SONIX is not allowed Members are not allowed to use the IX to exchange intra-organization traffic. Members are only allowed to exchange traffic targeting the Default-free zone (DFZ) Members must avoid actions that significantly risk overloading the IX service or other members.</description>
+    </item>
+    
+    <item>
+      <title>TRex Packet Generator</title>
+      <link>https://sonix.network/ops/trex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sonix.network/ops/trex/</guid>
+      <description>TRex SONIX has a Cisco TRex running in Kista Gate. It can be accessed by SSH at speedtest.sonix.network for SONIX OPS.
+Introduction TRex can run in a handful of modes, we run it in stateless mode. What this means to us is that TRex is a fast packet emitter that expects the packets it sends to return to the interface where it was sent. It does not care about anything related to sessions and not even neighbor discovery.</description>
+    </item>
+    
+  </channel>
+</rss>
