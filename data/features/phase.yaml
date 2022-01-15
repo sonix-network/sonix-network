@@ -1,0 +1,8 @@
+weight: 2
+name: "Status: Tech Preview"
+icon: "fas fa-flask"
+url: ""
+description: |
+  Currently SONIX is in a research & early adopters phase.
+
+  We are eager to allow peering with folks who can **handle some churn** while we work out how the IXP will look like in the long run.
