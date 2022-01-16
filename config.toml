@@ -102,8 +102,8 @@ paginate = 10
     disabled_logo = false
     logo_text = "SONIX"
 
-    logo = "img/logo.png"
-    logo_small = "img/logo-small.png"
+    logo = "img/logo.svg"
+    logo_small = "img/logo.svg"
     contact_url = "/contact"
 
 [permalinks]
