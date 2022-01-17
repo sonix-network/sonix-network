@@ -80,10 +80,16 @@ paginate = 10
     weight     = 6
 
 [[menu.main]]
+    name       = "Status"
+    identifier = "menu.status"
+    url        = "https://status.sonix.network"
+    weight     = 7
+
+[[menu.main]]
     identifier = "contact"
     name       = "Contact"
     url        = "/contact/"
-    weight     = 7
+    weight     = 10
 
 
 [params]
