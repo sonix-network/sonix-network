@@ -4,6 +4,14 @@ description = "Frequently asked questions"
 keywords = ["FAQ","How do I","questions","what if"]
 +++
 
+#### Do you have any Route Servers?
+
+Not yet, we're rolling out a new RS architecture that requires some more testing before it's ready
+
+#### Do you allow Transit peering over the IX?
+
+As long as it's settlement-free peering. E.g. free IPv6 transit is OK
+
 #### What media do you support?
 
 **100G:** 100GBASE-CWDM4, 100GBASE-LR4 (at extra cost)  
@@ -15,6 +23,6 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 Yes! If it's QSFP28 or QSFP+ compatible
 
-#### Do you have transceivers I can use?
+#### Got any transceivers I can use?
 
 Yes! We have transceivers at cost price
