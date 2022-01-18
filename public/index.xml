@@ -5,7 +5,11 @@
     <link>https://sonix.network/</link>
     <description>Recent content on SONIX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://sonix.network/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://sonix.network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Contact</title>
       <link>https://sonix.network/contact/</link>
@@ -21,12 +25,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sonix.network/faq/</guid>
-      <description>What media do you support? 100G: 100GBASE-CWDM4, 100GBASE-LR4 (at extra cost)
+      <description>Do you have any Route Servers? Not yet, we&amp;rsquo;re rolling out a new RS architecture that requires some more testing before it&amp;rsquo;s ready
+Do you allow Transit peering over the IX? As long as it&amp;rsquo;s settlement-free peering. E.g. free IPv6 transit is OK
+What media do you support? 100G: 100GBASE-CWDM4, 100GBASE-LR4 (at extra cost)
 40G: 40GBASE-LR4
 25G: 25GBASE-LR
 10G: 10GBASE-LR
-Bring your own transceiver (BYOT) allowed? Yes! If it&amp;rsquo;s QSFP28 or QSFP+ compatible
-Do you have transceivers I can use? Yes! We have transceivers at cost price</description>
+Bring your own transceiver (BYOT) allowed? Yes! If it&amp;rsquo;s QSFP28 or QSFP+ compatible</description>
     </item>
     
     <item>

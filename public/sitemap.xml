@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://sonix.network/authors/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/categories/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/contact/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/faq/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/ops/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/rules/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/tags/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://sonix.network/ops/trex/</loc>
   </url>
+  
 </urlset>
