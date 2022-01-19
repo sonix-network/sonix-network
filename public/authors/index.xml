@@ -5,10 +5,6 @@
     <link>https://sonix.network/authors/</link>
     <description>Recent content in Authors on SONIX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://sonix.network/authors/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://sonix.network/authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
