@@ -4,7 +4,9 @@ description = "Member rules for access to the IX"
 keywords = ["rules"]
 +++
 
-Version: 1.0
+Version: 1.1
+
+By connecting to SONIX you acknowledge to the following.
 
 # General requirements
 
@@ -25,7 +27,7 @@ If a member shows a willful disregard for the IX service rules they will be disc
  * For all traffic, the following rules apply:
    * Frame sizes upto (MTU) 9000 is allowed
    * Only Ethernet frame types IPv4 (0x0800), IPv6 (0x86dd) and ARP (0x0806) are allowed
- * For intra-IX* traffic, the following rules apply in addition to the above:
+ * For intra-IX[1] traffic, the following rules apply in addition to the above:
    * Traffic destined to the IX subnet must be sourced from the IX subnet
    * The following ICMP and ICMPv6 packets are forbidden:
      * ICMP Redirect Message (Type 5)
@@ -36,4 +38,19 @@ If a member shows a willful disregard for the IX service rules they will be disc
  * Only one MAC-address is allowed per link and is assigned by member
  * Only one IPv4-address and IPv6-address is allowed per link and is assigned by SONIX
 
-\*) Intra-IX is defined as traffic sourced from or destined to the IX network subnet.
+[1] Intra-IX is defined as traffic sourced from or destined to the IX network subnet.
+
+# Data Privacy
+
+ * SONIX implements data inspection[2] in order to calculate statistics of how the IX is
+   being used.
+   * Non-aggregated data is purged after maximum 90 days. Note: SONIX **aims** to
+     purge such data within 14 days.
+ * SONIX will provide access to data collected from a member port to that member if requested.
+ * SONIX publishes all time series data collected and computed publicly on [metric.sonix.network](https://metric.sonix.network/)
+   * Anyone is free to use the public Prometheus API to query these time series and
+     retain them for as long as they want.
+   * The member's AS name and number will be exported as part of these metrics.
+   * SONIX may retain time series data indefinitely.
+   
+[2] Using e.g. sFlow and selective traffic mirroring
