@@ -40,7 +40,7 @@ If a member shows a willful disregard for the IX service rules they will be disc
 
 [1] Intra-IX is defined as traffic sourced from or destined to the IX network subnet.
 
-# Data Privacy
+# Data privacy
 
  * SONIX implements data inspection[2] in order to calculate statistics of how the IX is
    being used.
