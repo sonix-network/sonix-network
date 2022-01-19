@@ -6,7 +6,7 @@ keywords = ["rules"]
 
 Version: 1.1
 
-By connecting to SONIX you acknowledge to the following.
+By connecting to SONIX you acknowledge the following.
 
 # General requirements
 
