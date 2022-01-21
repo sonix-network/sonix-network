@@ -334,7 +334,8 @@
                     <div class="col-md-12">
 
                         <div>
-                          <p>Version: 1.0</p>
+                          <p>Version: 1.1</p>
+<p>By connecting to SONIX you acknowledge the following.</p>
 <h1 id="general-requirements">General requirements</h1>
 <ul>
 <li>At least one physical on-net link with SONIX equipment</li>
@@ -356,7 +357,7 @@
 <li>Only Ethernet frame types IPv4 (0x0800), IPv6 (0x86dd) and ARP (0x0806) are allowed</li>
 </ul>
 </li>
-<li>For intra-IX* traffic, the following rules apply in addition to the above:
+<li>For intra-IX[1] traffic, the following rules apply in addition to the above:
 <ul>
 <li>Traffic destined to the IX subnet must be sourced from the IX subnet</li>
 <li>The following ICMP and ICMPv6 packets are forbidden:
@@ -373,7 +374,27 @@
 <li>Only one MAC-address is allowed per link and is assigned by member</li>
 <li>Only one IPv4-address and IPv6-address is allowed per link and is assigned by SONIX</li>
 </ul>
-<p>*) Intra-IX is defined as traffic sourced from or destined to the IX network subnet.</p>
+<p>[1] Intra-IX is defined as traffic sourced from or destined to the IX network subnet.</p>
+<h1 id="data-privacy">Data privacy</h1>
+<ul>
+<li>SONIX implements data inspection[2] in order to calculate statistics of how the IX is
+being used.
+<ul>
+<li>Non-aggregated data is purged after maximum 90 days. Note: SONIX <strong>aims</strong> to
+purge such data within 14 days.</li>
+</ul>
+</li>
+<li>SONIX will provide access to data collected from a member port to that member if requested.</li>
+<li>SONIX publishes all time series data collected and computed publicly on <a href="https://metric.sonix.network/">metric.sonix.network</a>
+<ul>
+<li>Anyone is free to use the public Prometheus API to query these time series and
+retain them for as long as they want.</li>
+<li>The member&rsquo;s AS name and number will be exported as part of these metrics.</li>
+<li>SONIX may retain time series data indefinitely.</li>
+</ul>
+</li>
+</ul>
+<p>[2] Using e.g. sFlow and selective traffic mirroring</p>
 
                         </div>
 
