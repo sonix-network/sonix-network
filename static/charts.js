@@ -4,6 +4,7 @@ var aliasMap = {
   'kg-sw1/Ethernet2': 'fyx',
   'kg-sw1/Ethernet3': 'Cynthia',
   'kg-sw1/Ethernet4': 'KeFF Networks',
+  'kg-sw1/Ethernet5': 'Glecom',
   'kg-sw1/Ethernet8': 'Kamel Networks',
   'kg-sw1/Ethernet': 'Mainframe Networks',
   'kg-sw1/Ethernet12': 'obe.net',
