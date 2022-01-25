@@ -8,6 +8,10 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 Not yet, we're rolling out a new RS architecture that requires some more testing before it's ready
 
+#### What MTU is used?
+
+MTU 9000
+
 #### Do you allow Transit peering over the IX?
 
 As long as it's settlement-free peering. E.g. free IPv6 transit is OK
