@@ -8,6 +8,13 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 Not yet, we're rolling out a new RS architecture that requires some more testing before it's ready
 
+#### What best practices do you recommend?
+
+We recommend:
+
+  - Ensure you are compliant with our [rules](/rules/)
+  - Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.
+
 #### What MTU is used?
 
 MTU 9000
