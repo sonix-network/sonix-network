@@ -10,9 +10,10 @@ Not yet, we're rolling out a new RS architecture that requires some more testing
 
 #### What best practices do you recommend?
 
-We recommend setting BGP timers to 3s Keepalive and 9s Hold in the event of a forwarding failure  
-  
-Make sure you are compliant with our [rules](/rules/) at the very minimum
+We recommend:
+
+  - Ensure you are compliant with our [rules](/rules/)
+  - Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.
 
 #### What MTU is used?
 
