@@ -16,7 +16,7 @@
 
 <meta name="description" content="Open Internet Exchange for Everybody">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.1" />
 
 
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
@@ -362,16 +362,16 @@ TRex should behave.</p>
 e.g. MAINFRAME-NET is <code>76:c0:f8:4b:c8:5d</code> and you are most welcome to use it
 for reasonable testing. You also need to configure static ARP or neighbor
 on the remote side, like this:</p>
-<pre><code>ip -6 neigh add 2a0a:d984::ff lladdr 00:50:56:85:e6:a4 dev Ethernet124
+<pre tabindex="0"><code>ip -6 neigh add 2a0a:d984::ff lladdr 00:50:56:85:e6:a4 dev Ethernet124
 </code></pre><p>The STL script is where you define what kind of traffic to send.
 The trex-core repository <a href="https://github.com/cisco-system-traffic-generator/trex-core/tree/master/scripts/stl">has a number of examples</a>
 that you can use.</p>
 <p>An example script is presented here for your convenience:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python3" data-lang="python3"><span style="color:#75715e"># Example STL</span>
-<span style="color:#f92672">from</span> trex_stl_lib.api <span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python3" data-lang="python3"><span style="color:#75715e"># Example STL</span>
+<span style="color:#f92672">from</span> trex_stl_lib.api <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">STLImix</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span> (self):
+    <span style="color:#66d9ef">def</span> __init__ (self):
         <span style="color:#75715e"># This is the 32 final bits in the IPv6 address (::ff).</span>
         self<span style="color:#f92672">.</span>ip_range <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;src&#39;</span>: {<span style="color:#e6db74">&#39;start&#39;</span>: <span style="color:#e6db74">&#34;0.0.0.255&#34;</span>, <span style="color:#e6db74">&#39;end&#39;</span>: <span style="color:#e6db74">&#34;0.0.0.255&#34;</span>},
                          <span style="color:#e6db74">&#39;dst&#39;</span>: {<span style="color:#e6db74">&#39;start&#39;</span>: <span style="color:#e6db74">&#34;0.0.0.255&#34;</span>, <span style="color:#e6db74">&#39;end&#39;</span>: <span style="color:#e6db74">&#34;0.0.0.255&#34;</span>}}
@@ -410,7 +410,7 @@ that you can use.</p>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">register</span>():
     <span style="color:#66d9ef">return</span> STLImix()
 </code></pre></div><p>When you have the script you can start it from <code>trex-console</code> like this:</p>
-<pre><code>trex&gt;service
+<pre tabindex="0"><code>trex&gt;service
 trex(service)&gt;l2 -p 0 --dst 76:c0:f8:4b:c8:5d
 trex(service)&gt;service --off
 # Start a run with the goal of sending 10 Mbit/s and run for 10 seconds

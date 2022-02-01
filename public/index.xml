@@ -5,11 +5,7 @@
     <link>https://sonix.network/</link>
     <description>Recent content on SONIX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://sonix.network/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://sonix.network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
       <link>https://sonix.network/contact/</link>
@@ -26,13 +22,9 @@
       
       <guid>https://sonix.network/faq/</guid>
       <description>Do you have any Route Servers? Not yet, we&amp;rsquo;re rolling out a new RS architecture that requires some more testing before it&amp;rsquo;s ready
-What MTU is used? MTU 9000
-Do you allow Transit peering over the IX? As long as it&amp;rsquo;s settlement-free peering. E.g. free IPv6 transit is OK
-What media do you support? 100G: 100GBASE-CWDM4, 100GBASE-LR4 (at extra cost)
-40G: 40GBASE-LR4
-25G: 25GBASE-LR
-10G: 10GBASE-LR
-Bring your own transceiver (BYOT) allowed?</description>
+What best practices do you recommend? We recommend:
+ Ensure you are compliant with our rules Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.  What MTU is used? MTU 9000
+Do you allow Transit peering over the IX?</description>
     </item>
     
     <item>
