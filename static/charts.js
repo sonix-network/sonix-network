@@ -14,6 +14,7 @@ var aliasMap = {
   'kg-sw1/Ethernet28': 'Blix Solutions AS',
   'kn7-sw1/Ethernet128': 'TELE2',
   'kn7-sw1/Ethernet8': 'ELASTX',
+  'kn7-sw1/Ethernet0': 'Gotanet',
   'kn7-sw1/Ethernet124': 'KN7<->KG',
   'kg-sw1/Ethernet128': 'KG<->KN7',
 };
