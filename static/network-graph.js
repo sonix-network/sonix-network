@@ -71,6 +71,8 @@ var tippyEdge = null;
     });
     makeTippy(cy.getElementById('node-kg'), 'Kista Gate').show();
     makeTippy(cy.getElementById('node-kn7'), 'KN7').show();
+    makeTippy(cy.getElementById('node-shg5'), 'SHG5').show();
+    makeTippy(cy.getElementById('node-sto1'), 'STO1').show();
   });
 
   cy.on('mouseup', function (e) {
