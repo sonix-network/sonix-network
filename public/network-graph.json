@@ -6,6 +6,14 @@
   "data": {
     "id": "node-kn7"
   }
+}, {
+  "data": {
+    "id": "node-sto1"
+  }
+}, {
+  "data": {
+    "id": "node-shg5"
+  }
 },
 {
   "data": {
@@ -16,9 +24,9 @@
   "classes": "bezier"
 }, {
   "data": {
-    "id": "kg-kn7-2",
+    "id": "kg-sto1-3",
     "source": "node-kg",
-    "target": "node-kn7"
+    "target": "node-sto1"
   },
   "classes": "bezier"
 }]
