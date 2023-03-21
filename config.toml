@@ -74,6 +74,12 @@ paginate = 10
     parent     = "section.services"
 
 [[menu.main]]
+    name       = "MEMBERS"
+    identifier = "menu.members"
+    url        = "https://manager.sonix.network/customer/details"
+    weight     = 5
+
+[[menu.main]]
     name       = "FAQ"
     identifier = "menu.faq"
     url        = "/faq/"
