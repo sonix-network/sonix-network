@@ -23,7 +23,7 @@
       <guid>https://sonix.network/faq/</guid>
       <description>Do you have any Route Servers? Not yet, we&amp;rsquo;re rolling out a new RS architecture that requires some more testing before it&amp;rsquo;s ready
 What best practices do you recommend? We recommend:
- Ensure you are compliant with our rules Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.  What MTU is used? MTU 9000
+Ensure you are compliant with our rules Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure. What MTU is used? MTU 9000
 Do you allow Transit peering over the IX?</description>
     </item>
     
@@ -35,8 +35,8 @@ Do you allow Transit peering over the IX?</description>
       <guid>https://sonix.network/rules/</guid>
       <description>Version: 1.2
 The following rules are applicable to the following SONIX IXPs:
- SONIX Stockholm SONIX Gothenburg  By connecting to an IXP part of SONIX you acknowledge the following.
-General requirements  At least one physical on-net link with SONIX equipment ASN assigned by RIR Settlement-free peering only; to exchange paid services between members that depends on SONIX is not allowed Members are not allowed to use the IX to exchange intra-organization traffic.</description>
+SONIX Stockholm SONIX Gothenburg By connecting to an IXP part of SONIX you acknowledge the following.
+General requirements At least one physical on-net link with SONIX equipment ASN assigned by RIR Settlement-free peering only; to exchange paid services between members that depends on SONIX is not allowed Members are not allowed to use the IX to exchange intra-organization traffic.</description>
     </item>
     
     <item>

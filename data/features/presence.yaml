@@ -4,11 +4,11 @@ icon: "fas fa-globe"
 url: ""
 description: |
   We are a young IXP still getting established, but right now we are present at the following locations.
-  - Stockholm
+  - [Stockholm](https://www.peeringdb.com/ix/3607)
     - [Obe Kista Gate](https://peeringdb.com/fac/5544)
     - [Stokab KN7](https://peeringdb.com/fac/1053)
     - [Interxion Stockholm](https://peeringdb.com/fac/208)
     - [Equinix SK1](https://www.peeringdb.com/fac/156) (planned)
-  - Gothenburg
+  - [Gothenburg](https://www.peeringdb.com/ix/3745)
     - [Gothnet DC Marieholm](https://peeringdb.com/fac/434)
     - [Gothnet DC Backa](https://peeringdb.com/fac/9308)
