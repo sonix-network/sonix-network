@@ -1,3 +1,6 @@
+run:
+	hugo server
+
 push:
 	rm -fr public/
 	hugo
@@ -7,3 +10,6 @@ push:
 	git branch -D gh-pages || true
 	git subtree split --prefix public -b gh-pages
 	git push -f origin gh-pages:gh-pages
+
+clean:
+	rm -rf public/
