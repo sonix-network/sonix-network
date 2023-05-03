@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
 
-Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
+Universal is a clean and stylish website template built with [Bootstrap](https://getbootstrap.com/docs/3.4/getting-started/). It stands out with its clean design and elegant typography.
 
 Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.github.io/hugo-universal-theme/)
 
@@ -17,30 +17,37 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
 
 ## Table of Contents
 
-* [Features](#features)
-* [Installation](#installation)
-* [Configuration](#configuration)
-  * [Style](#style)
-  * [Comments](#comments)
-  * [Google Analytics](#google-analytics)
-  * [Contact form](#contact-form)
-  * [Menu](#menu)
-  * [Sidebar widgets](#sidebar-widgets)
-  * [Blog post thumbnails](#blog-post-thumbnails)
-  * [Top bar](#top-bar)
-  * [Landing page](#landing-page)
-    * [Carousel](#carousel)
-    * [Features](#features)
-    * [Testimonials](#testimonials)
-    * [See more](#see-more)
-    * [Clients](#clients)
-    * [Recent posts](#recent-posts)
-    * [Footer](#footer)
-  * [Meta tags](#meta-tags)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-* [Thanks](#thanks)
+- [Universal Theme for Hugo](#universal-theme-for-hugo)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Language](#language)
+    - [Style](#style)
+    - [Comments](#comments)
+    - [Google Analytics](#google-analytics)
+    - [Logo](#logo)
+    - [Contact form](#contact-form)
+    - [Menu](#menu)
+    - [Sidebar widgets](#sidebar-widgets)
+    - [Top bar](#top-bar)
+    - [Blog post thumbnails](#blog-post-thumbnails)
+    - [Landing page](#landing-page)
+      - [Carousel](#carousel)
+      - [Features](#features-1)
+      - [Testimonials](#testimonials)
+      - [See more](#see-more)
+      - [Clients](#clients)
+      - [Recent posts](#recent-posts)
+      - [Footer](#footer)
+        - [About us](#about-us)
+        - [Recent posts](#recent-posts-1)
+        - [Contact](#contact)
+    - [Meta tags](#meta-tags)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Thanks](#thanks)
 
 ## Features
 
@@ -120,7 +127,7 @@ Leave the `googleAnalytics` key empty to disable it.
 
 ### Logo
 
-A logo can be selected, two parameters `logo` and `logo_small` can be defined. By default `logo` is used for medium and big screens and the `logo_small` value will be used when the site is rendered on small screens. Also there is the posibility to disable the logo and render a alternative text.
+A logo can be selected, two parameters `logo` and `logo_small` can be defined. By default `logo` is used for medium and big screens and the `logo_small` value will be used when the site is rendered on small screens. Also there is the possibility to disable the logo and render a alternative text.
 
 ```toml
 [params]
@@ -338,6 +345,15 @@ The social links on the right side are configured as a top-level menu.
     pre = "<i class='fas fa-2x fa-facebook'></i>"
 ```
 
+### Menu behavior
+
+The dropdown menu is displayed by default when the user clicks on the menu item. However, you can also use the `dropdown_mouse_over` setting to change this behavior and use the mouse over instead.
+
+```toml
+[params]
+    dropdown_mouse_over = true
+```
+
 ### Blog post thumbnails
 
 After creating a new post you can define a banner by entering the relative path to the image.
@@ -377,9 +393,10 @@ description: >
     <li>Easily to change fonts</li>
   </ul>
 image: "img/carousel/template-easy-code.png"
+href: "https://devcows.github.io/hugo-universal-theme/"
 ```
 
-The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. And the `image` must contain the relative path to the image inside the `static` directory.
+The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. The `image` must contain the relative path to the image inside the `static` directory. The optional `href` field contains a relative or absolute url that the user will be redirected to when clicking the carousel (specific to each carousel item).
 
 Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
 
@@ -535,6 +552,7 @@ summaryLength = 70
 ```
 
 Recent posts use `.Summary` property and by default, Hugo automatically takes the first 70 words of your content as its summary and stores it into the `.Summary` page variable for use in your templates. You may customize the summary length by setting summaryLength in your site configuration.
+When setting the `hide_summary` configuration property to `true` the summary will be hidden on the recent posts as well as the blogs list page.
 
 #### Footer
 
