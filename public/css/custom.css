@@ -1,0 +1,87 @@
+/* your styles go here */
+/* Example site test */
+
+.box-image-text .image {
+    min-height: 190px;
+    max-height: 190px;
+}
+
+.box-image-text .image img {
+    max-height: 190px;
+    margin: auto;
+}
+
+.box-simple {
+    min-height: 230px;
+}
+
+.box-simple li {
+  text-align: left;
+}
+
+.home-carousel h1, .home-carousel ul {
+  text-transform: none;
+}
+
+.home-carousel {
+   /* Replace this with a stil of the first frame of the carousel video
+    * when we have one */
+   background: url(../img/carousel.webp) center center repeat;
+   position: relative;
+   overflow: hidden;
+ }
+
+/* Not in use right now, but will be when we have a good video to use */
+.home-carousel video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 150%; /* Used to align the video vertically without video editing :-) */
+  width: 100%;
+}
+
+.bar.background-image-fixed-2 {
+  background: url(../img/carousel.webp) center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bar .dark-mask {
+  opacity: 0.7;
+}
+
+.home-carousel .img-responsive {
+  padding: 0.25rem;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.modal-dialog {
+  max-width: 760px;
+}
+.graph {
+  width: auto;
+  margin: 4rem auto;
+  margin-top:0;
+  margin-bottom:0;
+}
+#cy {
+  width: 100%;
+  min-height: 400px;
+  height: 40vh;
+  z-index: 999;
+}
+
+.chart-box {
+  padding: 1.25rem;
+  margin: 1em;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 1.25rem;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+}

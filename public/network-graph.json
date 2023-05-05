@@ -1,0 +1,32 @@
+[{
+  "data": {
+    "id": "node-kg"
+  }
+}, {
+  "data": {
+    "id": "node-kn7"
+  }
+}, {
+  "data": {
+    "id": "node-sto1"
+  }
+}, {
+  "data": {
+    "id": "node-shg5"
+  }
+},
+{
+  "data": {
+    "id": "kg-kn7-1",
+    "source": "node-kg",
+    "target": "node-kn7"
+  },
+  "classes": "bezier"
+}, {
+  "data": {
+    "id": "kg-sto1-3",
+    "source": "node-kg",
+    "target": "node-sto1"
+  },
+  "classes": "bezier"
+}]
