@@ -26,7 +26,7 @@
 .home-carousel {
    /* Replace this with a stil of the first frame of the carousel video
     * when we have one */
-   background: url(../img/carousel.jpg) center center repeat;
+   background: url(../img/carousel.webp) center center repeat;
    position: relative;
    overflow: hidden;
  }
@@ -42,7 +42,7 @@
 }
 
 .bar.background-image-fixed-2 {
-  background: url(../img/carousel.jpg) center top no-repeat;
+  background: url(../img/carousel.webp) center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
