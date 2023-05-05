@@ -1,5 +1,6 @@
-/* your styles go here */
-/* Example site test */
+.navbar-brand img {
+  aspect-ratio: 16 / 3;
+}
 
 .box-image-text .image {
     min-height: 190px;
@@ -24,11 +25,10 @@
 }
 
 .home-carousel {
-   /* Replace this with a stil of the first frame of the carousel video
-    * when we have one */
    background: url(../img/carousel.webp) center center repeat;
    position: relative;
    overflow: hidden;
+   min-height: 340px;
  }
 
 /* Not in use right now, but will be when we have a good video to use */
@@ -56,6 +56,7 @@
   background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
+  aspect-ratio: 16 / 9;
 }
 
 .modal-dialog {
