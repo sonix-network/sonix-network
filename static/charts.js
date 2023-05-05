@@ -7,7 +7,7 @@ function job(m) {
   return m.labels.job;
 }
 
-function interface(m) {
+function iface(m) {
   let re = /ixp-(.*)\.sonix\.network/;
   let sw = (m.labels.instance.match(re)[1]);
   let key = sw + '/' + m.labels.interface;
@@ -18,12 +18,18 @@ function interface(m) {
   return alias
 }
 
-function bitsLabelCallback(tooltipItem, data) {
-  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+function site(m) {
+  let re = /ixp-(.*)\.sonix\.network/;
+  let sw = (m.labels.instance.match(re)[1]);
+  return sw
+}
+
+function bitsLabelCallback(context) {
+  var label = context.dataset.label || '';
   if (label) {
     label += ': ';
   }
-  label += formatSI(tooltipItem.yLabel) + 'ib/s';
+  label += formatSI(context.parsed.y) + 'bit/s';
   return label;
 }
 
@@ -32,42 +38,33 @@ new Chart(ctx1, {
   plugins: [ChartDatasourcePrometheusPlugin],
   options: {
     maintainAspectRatio: false,
-    tooltips: {
-      callbacks: {
-        label: bitsLabelCallback
-      }
-    },
     animation: {
       duration: 0,
     },
-    legend: {
-      display: false,
-    },
     scales: {
-      yAxes: [{
+      y: {
         ticks: {
           callback: function(value, index, values) {
-            return formatSI(value) + 'ib/s';
+            return formatSI(value) + 'bit/s';
           }
-        }
-      }],
-      xAxes: [{
-        type: 'time',
-        time: {
-          unit: 'hour',
-          displayFormats: {
-            hour: 'HH:mm'
-          }
-        }
-      }]
+        },
+      },
     },
     plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: bitsLabelCallback
+        }
+      },
       'datasource-prometheus': {
         prometheus: {
           endpoint: "https://metric.sonix.network",
           baseURL: "/api/v1",   // default value
         },
-        findInLabelMap: interface,
+        findInLabelMap: iface,
         query: `
 (
   rate(sai_port_in_packet_size_bytes_sum[10m]) +
@@ -80,11 +77,67 @@ topk(20,
   > 1*1000*1000
 )
 `,
+        time: {
+          unit: 'hour',
+          displayFormats: {
+            hour: 'HH:mm'
+          }
+        },
         timeRange: {
           type: 'relative',
 
           // from 12 hours ago to now
           start: -12 * 60 * 60 * 1000,
+          end: 0,
+        },
+      },
+    },
+  },
+});
+
+new Chart(ctx2, {
+  type: 'bar',
+  plugins: [ChartDatasourcePrometheusPlugin],
+  options: {
+    maintainAspectRatio: false,
+    animation: {
+      duration: 0,
+    },
+    scales: {
+      y: {
+        ticks: {
+          callback: function(value, index, values) {
+            return formatSI(value) + 'bit/s';
+          }
+        }
+      }
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: bitsLabelCallback
+        }
+      },
+      'datasource-prometheus': {
+        prometheus: {
+          endpoint: "https://metric.sonix.network",
+          baseURL: "/api/v1",   // default value
+        },
+        findInLabelMap: site,
+        query: `
+sum(
+  rate(sai_port_in_packet_size_bytes_sum[10m]) +
+  rate(sai_port_out_packet_size_bytes_sum[10m])
+) by (instance) * 8
+`,
+        fill: true,
+        stacked: true,
+        timeRange: {
+          type: 'relative',
+          start: -1,
           end: 0,
         },
       },

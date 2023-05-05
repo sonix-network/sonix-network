@@ -1,8 +1,10 @@
 weight: 2
-name: "Status: Tech Preview"
-icon: "fas fa-flask"
+name: "Status: Engines firing"
+icon: "fas fa-rocket"
 url: ""
 description: |
-  Currently SONIX is in a research & early adopters phase.
+  These days SONIX is in a growth phase.
 
-  We are eager to allow peering with folks who can **handle some churn** while we work out how the IXP will look like in the long run.
+  The platform is maturing in a fast pace and we are happy to accept peering requests
+  from interested parties. We continue to expand our capacity and plan new sites
+  as interest grows.

@@ -81,3 +81,7 @@
   border: 1px solid #dee2e6;
   border-radius: 1.25rem;
 }
+
+.chart-box canvas {
+  width: 100% !important;
+}
