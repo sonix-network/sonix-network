@@ -27,18 +27,19 @@ As long as it's settlement-free peering. E.g. free IPv6 transit is OK
 
 We are prepared to quickly connect the following medias:
 
-**100G:** 100GBASE-CWDM4, 100GBASE-LR4 (at extra cost)  
-**50G:** 50GBASE-ER (at extra cost)  
-**40G:** 40GBASE-LR4  
-**25G:** 25GBASE-LR  
+**400G:** QSFP-DD, e.g. 400GBASE-FR4 (at extra cost, **available for closed beta testers only**)
+**100G:** 100GBASE-CWDM4, 100GBASE-LR4 (at extra cost)
+**50G:** 50GBASE-ER (at extra cost)
+**40G:** 40GBASE-LR
+**25G:** 25GBASE-LR
 **10G:** 10GBASE-LR
 
-Require something else? As long as it is between 10G-100G chances
+Require something else? As long as it is between 10G-400G chances
 are that we can find a solution that fits. Contact us!
 
 #### Bring your own transceiver (BYOT) allowed?
 
-Yes! If it's QSFP28 or QSFP+ compatible
+Yes! If it's QSFP28 or QSFP+ compatible. For 400G we support QSFP-DD.
 
 #### Got any transceivers I can use?
 
