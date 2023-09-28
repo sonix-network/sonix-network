@@ -4,12 +4,13 @@ description = "Member rules for access to the IX"
 keywords = ["rules"]
 +++
 
-Version: 1.2
+Version: 1.3
 
 The following rules are applicable to the following SONIX IXPs:
 
  - SONIX Stockholm
  - SONIX Gothenburg
+ - SONIX Malmo
 
 By connecting to an IXP part of SONIX you acknowledge the following.
 
