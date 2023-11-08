@@ -73,6 +73,7 @@ var tippyEdge = null;
     makeTippy(cy.getElementById('node-kn7'), 'KN7').show();
     makeTippy(cy.getElementById('node-shg5'), 'SHG5').show();
     makeTippy(cy.getElementById('node-ixn'), 'IXN').show();
+    makeTippy(cy.getElementById('node-vg4'), 'VG4').show();
   });
 
   cy.on('mouseup', function (e) {
