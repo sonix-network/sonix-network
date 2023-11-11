@@ -1,6 +1,6 @@
 +++
 title = "Donate"
-id = "contact"
+description= "Donation page"
 +++
 
 # Support your local non-profit IX
