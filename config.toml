@@ -98,6 +98,12 @@ paginate = 10
     weight     = 10
 
 [[menu.main]]
+    identifier = "donate"
+    name       = "Donate"
+    url        = "/donate/"
+    weight     = 11
+
+[[menu.main]]
     identifier = "join"
     name       = "Join"
     url        = "https://forms.gle/xJ5CXbSWk8snzgND9"
