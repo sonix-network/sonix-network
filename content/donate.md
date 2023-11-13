@@ -23,6 +23,21 @@ Your generous contribution will be allocated towards:
 
 ## Ways to Contribute
 
+### Donate Hardware
+
+We are always interested in different kinds of hardware such as:
+
+- Whitebox switches (especially on https://sonic-net.github.io/SONiC/Supported-Devices-and-Platforms.html) or switches capable of running SONiC in general
+- Enterprise-class SSDs
+- 100G and faster network cards
+- QSFP28 and QSFP-DD transceivers
+- 20km+ DWDM equipment, 10Gbit/s+
+- 1U shallow servers with low power usage
+- Fiber optical breakout cables
+- S3 storage capacity
+
+[Donate Hardware](#link-to-donation-form)
+
 ### One-time Donation
 
 Every single contribution makes a difference. Your one-time donation helps us address immediate needs and implement vital upgrades.
@@ -35,15 +50,5 @@ Consider becoming a sustaining supporter by opting for a monthly donation. Your 
 
 [Subscribe Now](#link-to-subscription-form)
 
-### Donate Hardware
 
-We are always interested in different kinds of hardware such as:
-
-- Newer Intel or Mellanox NICs
-- DPUs
-- Servers
-- Switches
-- ???
-
-[Donate Hardware](#link-to-donation-form)
 
