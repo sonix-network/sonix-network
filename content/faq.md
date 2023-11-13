@@ -6,9 +6,9 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 # Frequently Asked Questions
 
-### Do you have any Route Servers?
+### Do you have Route Servers?
 
-Yes, we do! Many choose to connect and use them. But we're currently in the process of redesigning them to enhance their functionality and performance.
+Yes, we do! Many choose to connect. We're currently in the process of redesigning them to enhance their functionality and performance.
 
 ### What best practices do you recommend?
 
