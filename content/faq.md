@@ -5,25 +5,33 @@ keywords = ["FAQ","How do I","questions","what if"]
 +++
 
 # Frequently Asked Questions
+#### How much does a port cost?
+
+Nothing! All ports are currently for free.
+
+However certain locations requires a one-time fee to cover our sponsors ODF cost:
+ - Digital Realty Stockholm - 5740 SEK (~€500)
+
+#### Do you have any Route Servers?
 
 ### Do you have Route Servers?
 
-Yes, we do! Many choose to connect. We're currently in the process of redesigning them to enhance their functionality and performance.
+Yes, we do and encourage all peers to connect. Currently we only have a route server in the Stockholm location. We are currently working on deploying route servers to other sites.
 
 ### What best practices do you recommend?
 
 We recommend:
 
-- Ensure you are compliant with our [rules](/rules/)
+- Ensure you are compliant with our [rules](/rules/).
 - Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.
 
 ### What MTU is used?
 
-We use MTU 9000
+We use MTU 9000.
 
 ### Do you allow Transit peering over the IX?
 
-As long as it's settlement-free peering. E.g. free IPv6 transit is OK
+As long as it's settlement-free peering. E.g. free IPv6 transit is OK.
 
 ### What media do you support?
 
@@ -45,5 +53,5 @@ Yes! If it's QSFP28 or QSFP+ compatible. For 400G we support QSFP-DD.
 
 ### Got any transceivers I can use?
 
-Yes! We have transceivers at cost price
+Yes! We have transceivers at cost price.
 
