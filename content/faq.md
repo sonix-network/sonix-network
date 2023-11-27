@@ -4,6 +4,13 @@ description = "Frequently asked questions"
 keywords = ["FAQ","How do I","questions","what if"]
 +++
 
+#### How much does a port cost?
+
+Nothing! All ports are currently for free.
+
+However certain locations requires a one-time fee to cover our sponsors ODF cost:
+ - Digital Realty Stockholm - 5740 SEK (~€500)
+
 #### Do you have any Route Servers?
 
 Not yet, we're rolling out a new RS architecture that requires some more testing before it's ready
