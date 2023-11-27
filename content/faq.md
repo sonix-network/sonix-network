@@ -5,14 +5,12 @@ keywords = ["FAQ","How do I","questions","what if"]
 +++
 
 # Frequently Asked Questions
-#### How much does a port cost?
+### How much does a port cost?
 
 Nothing! All ports are currently for free.
 
 However certain locations requires a one-time fee to cover our sponsors ODF cost:
  - Digital Realty Stockholm - 5740 SEK (~€500)
-
-#### Do you have any Route Servers?
 
 ### Do you have Route Servers?
 
