@@ -5,11 +5,39 @@ keywords = ["FAQ","How do I","questions","what if"]
 +++
 
 # Frequently Asked Questions
+
 ### How much does a port cost?
 
-Nothing! All ports are currently for free.
+Nothing! All ports are currently for free. No setup cost, no monthly recurring cost.
 
-However certain locations requires a one-time fee to cover our sponsors ODF cost:
+{{< notice note >}}
+Think of the **port price** as the price to allocate a port in our equipment
+to you as a user. Usually this cost is quite high on many Internet Exchanges,
+but not on SONIX.
+{{< /notice >}}
+
+### Wow, is everything really free?
+
+Compared to a conventional Internet Exchange, then yes.
+
+However, as you may know, extra costs to connect to your port may occur
+outside of our control. For example, certain locations requires a one-time fee
+to cover our sponsors ODF cost, and as usual you need to check with your
+datacenter sales contact what they charge to provide you with the fiber
+connection to our port.
+
+Finally, if you require specific optics that we do not have in stock
+you need to pay our procurement price. Don't worry, we have plenty of 100G and
+10G modules to go around - and even if your specific optic is not in stock,
+we have excellent and cost effective suppliers, or you can simply mail
+a suitable module to us and we will be happy to use it.
+
+#### What sites require a one-time cross-connect setup fee?
+
+We try hard to find solutions that make everything free, but at some sites we
+cannot currently reach all the way. At these sites the sponsor will charge a
+per-port fee that we have to pass down to the user.
+
  - Digital Realty Stockholm - 5740 SEK (~€500)
 
 ### Do you have Route Servers?
@@ -51,5 +79,6 @@ Yes! If it's QSFP28 or QSFP+ compatible. For 400G we support QSFP-DD.
 
 ### Got any transceivers I can use?
 
-Yes! We have transceivers at cost price.
+Yes! We have 100GBASE-CWDM4 we can give you free of charge, and we are happy to
+provide other transceivers at cost price.
 
