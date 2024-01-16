@@ -82,3 +82,11 @@ Yes! If it's QSFP28 or QSFP+ compatible. For 400G we support QSFP-DD.
 Yes! We have 100GBASE-CWDM4 we can give you free of charge, and we are happy to
 provide other transceivers at cost price.
 
+### Why do you have sites that are invite only?
+
+It boils down to what connectivity we can manage to secure from our sponsors.
+If a site is known to have large networks, we need to be selective on which
+networks we on-board.
+
+Want to help? Have a lookt at our [donation](/donate/) page to see what kind
+of equipment we need to make the site better.
