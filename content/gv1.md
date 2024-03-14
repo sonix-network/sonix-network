@@ -13,7 +13,7 @@ If you're here, you've discovered the QR code on our 100GBASE-CWDM4 module which
 
 - **2km Range:** Ideal for extensive network setups, this module can efficiently handle connectivity over distances up to 2 kilometers.
   
-- **RS-FEC Necessity:** The module incorporates RS-FEC (Reed-Solomon Forward Error Correction) to ensure superior data integrity and reliable transmission, a critical aspect for maintaining high-quality network performance.
+- **RS-FEC Required:** RS-FEC (Reed-Solomon Forward Error Correction) needs to be supported and enabled in your switch.
 
 ### Explore More and Get Involved
 - **Join SONIX:** Use the module you have recieved to connect to our internet exchange by [signing up](https://forms.gle/xJ5CXbSWk8snzgND9).
