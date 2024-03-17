@@ -3,15 +3,15 @@ name: "Presence"
 icon: "fas fa-globe"
 url: ""
 description: |
-  We are a young IXP still getting established, but right now we are present at the following locations.
+  Right now we are present at the following locations:
   - [Stockholm](https://www.peeringdb.com/ix/3607)
     - [Obe Kista Gate](https://peeringdb.com/fac/5544)
     - [Stokab KN7](https://peeringdb.com/fac/1053)
     - [Digital Realty Stockholm](https://peeringdb.com/fac/208)
-    - [Equinix SK1](https://www.peeringdb.com/fac/156) ([invite only](/faq/#why-do-you-have-sites-that-are-invite-only))
+    - [Equinix SK1](https://www.peeringdb.com/fac/156) (coming soon)
     - [City Hosting](https://www.peeringdb.com/fac/14462) (coming soon)
   - [Gothenburg](https://www.peeringdb.com/ix/3745)
     - [Gothnet DC Marieholm](https://peeringdb.com/fac/434)
     - [Gothnet DC Backa](https://peeringdb.com/fac/9308)
-  - [Malmö](https://www.peeringdb.com/ix/4292) (coming soon)
+  - [Malmö](https://www.peeringdb.com/ix/4292)
     - [Västergatan 4](https://www.peeringdb.com/fac/484)

@@ -3,6 +3,8 @@ name: "Green IXP"
 icon: "fas fa-leaf"
 url: ""
 description: |
-  Even now in the early days of the IXP, the core switches run the open-source NOS SONiC on self-refurbished hardware that otherwise would have become e-waste.
+  Our core switches run the open-source NOS SONiC on self-refurbished hardware that otherwise would have become e-waste.
 
-  It is in this way we believe SONIX can both push innovation as well as being environmentally friendly.
+  Thanks to our refurbishment process we are proud to offer free 100G ports,
+  optics included, at all our sites. We have other speeds too of course, but
+  we are extra proud of our 100G offering.
