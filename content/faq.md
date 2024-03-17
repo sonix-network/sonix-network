@@ -63,11 +63,11 @@ As long as it's settlement-free peering. E.g. free IPv6 transit is OK.
 
 We are prepared to quickly connect the following medias:
 
-**400G:** 400GBASE-FR4  
-**200G:** 200GBASE-LR4  
+**400G:** 400GBASE-LR4, 400GBASE-FR4  
+**200G:** 200GBASE-LR4, 200GBASE-FR4  
 **100G:** 100GBASE-CWDM4, 100GBASE-LR4, 100GBASE-LR1  
-**50G:** 50GBASE-ER  
-**40G:** 40GBASE-LR  
+**50G:** 50GBASE-LR, 50GBASE-ER  
+**40G:** 40GBASE-LR4  
 **25G:** 25GBASE-LR  
 **10G:** 10GBASE-LR  
 
