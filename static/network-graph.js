@@ -14,8 +14,8 @@ var tippyEdge = null;
     },
     userZoomingEnabled: false,
     userPanningEnabled: false,
-    style: fetch('cy-style.json').then(toJson),
-    elements: fetch('network-graph.json').then(toJson)
+    style: fetch('/cy-style.json').then(toJson),
+    elements: fetch('/network-graph.json').then(toJson)
   });
 
   cy.ready(function(){

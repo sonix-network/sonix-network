@@ -1,10 +1,12 @@
-
 <script language="javascript">
 var ul = document.querySelector('ul.customers');
-for (var i = ul.children.length; i >= 0; i--) {
-    ul.appendChild(ul.children[Math.random() * i | 0]);
+if (ul !== null) {
+    for (var i = ul.children.length; i >= 0; i--) {
+        ul.appendChild(ul.children[Math.random() * i | 0]);
+    }
 }
 </script>
+
 <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -28,7 +30,7 @@ for (var i = ul.children.length; i >= 0; i--) {
 <script src="https://unpkg.com/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha256-l/1pMF/+J4TThfgARS6KwWrk/egwuVvhRzfLAMQ6Ds4=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js" integrity="sha256-Pw/nDrJszyj2iHoZLinTjdfvfC8HmnMwStQt3HvtN94=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape-popper@2.0.0/cytoscape-popper.js" integrity="sha256-PdPPrZ/Eui1+ABkxtqhhottjq/t8cOXAzWei6PAi920=" crossorigin="anonymous"></script>
-<script src="format-si.js"></script>
-<script src="charts.js"></script>
-<script src="network-graph.js"></script>
+<script src="/format-si.js"></script>
+<script src="/charts.js"></script>
+<script src="/network-graph.js"></script>
 <script src="https://status.sonix.network/embed/script.js"></script>
