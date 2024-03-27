@@ -67,11 +67,21 @@ function createTableBody(table, members, ixpList) {
         // Format the member_since date
         let memberSince = new Date(member.member_since).toISOString().split('T')[0];
         row.insertCell().textContent = memberSince;
+
         row.insertCell().textContent = member.name;
         row.insertCell().textContent = member.peering_policy;
 
         let colo = getColoForIXP(member.connection_list, ixpList);
         row.insertCell().textContent = colo;
+
+        // Calculate and display total connection speed in Gbps
+        let totalSpeedMbps = member.connection_list.reduce((sum, connection) => {
+            return sum + connection.if_list.reduce((sumInner, iface) => {
+                return sumInner + iface.if_speed;
+            }, 0);
+        }, 0);
+        let totalSpeedGbps = (totalSpeedMbps / 1000).toFixed(0); // Convert to Gbps
+        row.insertCell().textContent = `${totalSpeedGbps} G`;
     });
 }
 
