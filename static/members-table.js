@@ -77,9 +77,23 @@ function createTableBody(table, members, ixpList) {
 
 function getColoForIXP(connectionList, ixpList) {
     if (!connectionList || !connectionList.length) return 'No colocation data';
-    let ixpId = connectionList[0].ixp_id;
-    let ixp = ixpList.find(ix => ix.ixp_id === ixpId);
-    return ixp && ixp.switch && ixp.switch.length ? ixp.switch[0].colo : 'No colocation data';
+
+    let colos = [];
+
+    connectionList.forEach(connection => {
+        let ixp = ixpList.find(ix => ix.ixp_id === connection.ixp_id);
+        if (ixp && ixp.switch && ixp.switch.length) {
+            connection.if_list.forEach(iface => {
+                let switchInfo = ixp.switch.find(sw => sw.id === iface.switch_id);
+                if (switchInfo) {
+                    colos.push(switchInfo.colo);
+                }
+            });
+        }
+    });
+
+    // Remove duplicates and join the unique colocation sites
+    return [...new Set(colos)].join(', ');
 }
 
 function sortTable(table, columnIndex, header) {
@@ -110,7 +124,6 @@ function addSearchFunctionality() {
     input.addEventListener('keyup', filterTable);
     document.getElementById('table-container').prepend(input);
 }
-
 function filterTable() {
     let input = document.getElementById('search-input');
     let filter = input.value.toUpperCase();
@@ -120,6 +133,6 @@ function filterTable() {
     for (let i = 1; i < tr.length; i++) {
         let row = tr[i];
         let text = Array.from(row.getElementsByTagName('td')).map(td => td.textContent).join(' ');
-        row.style.display
+        row.style.display = text.toUpperCase().includes(filter) ? '' : 'none';
     }
 }
