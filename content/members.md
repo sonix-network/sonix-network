@@ -1,8 +1,8 @@
 +++
-title = "IXP manager members"
+title = "SONIX connected members"
 +++
 
-# lol
+# Members
 
 <div id="table-container"></div>
 <script src="/members-table.js"></script>

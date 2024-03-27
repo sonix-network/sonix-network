@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     fetchDataAndCreateTable();
+    addSearchFunctionality();
 });
 
 async function fetchDataAndCreateTable() {
@@ -28,6 +29,8 @@ function createTable(members, ixpList) {
     }
 
     let table = document.createElement('table');
+    table.setAttribute('id', 'members-table');
+    table.className = 'table table-hover'; // Class names from Hugo Universal Theme
     createTableHead(table);
     createTableBody(table, members, ixpList);
     container.appendChild(table);
@@ -36,10 +39,14 @@ function createTable(members, ixpList) {
 function createTableHead(table) {
     let thead = table.createTHead();
     let headerRow = thead.insertRow();
-    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Contact Email', 'Colocation'];
-    headers.forEach(text => {
+    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation'];
+    headers.forEach((text, index) => {
         let th = document.createElement('th');
         th.textContent = text;
+        th.setAttribute('data-sort-direction', 'asc'); // Add data attribute for sort direction
+        th.addEventListener('click', () => {
+            sortTable(table, index, th);
+        });
         headerRow.appendChild(th);
     });
 }
@@ -49,15 +56,20 @@ function createTableBody(table, members, ixpList) {
     members.forEach(member => {
         let row = tbody.insertRow();
 
-        row.insertCell().textContent = member.asnum;
-        row.insertCell().textContent = member.member_since;
+        // Make AS Number a link
+        let asCell = row.insertCell();
+        let link = document.createElement('a');
+        link.href = `https://www.peeringdb.com/asn/${member.asnum}`;
+        link.textContent = member.asnum;
+        link.target = "_blank";
+        asCell.appendChild(link);
+
+        // Format the member_since date
+        let memberSince = new Date(member.member_since).toISOString().split('T')[0];
+        row.insertCell().textContent = memberSince;
         row.insertCell().textContent = member.name;
         row.insertCell().textContent = member.peering_policy;
 
-        let contactEmail = member.contact_email ? member.contact_email.join(', ') : 'No email provided';
-        row.insertCell().textContent = contactEmail;
-
-        // Find and display colocation based on ixp_id
         let colo = getColoForIXP(member.connection_list, ixpList);
         row.insertCell().textContent = colo;
     });
@@ -65,10 +77,49 @@ function createTableBody(table, members, ixpList) {
 
 function getColoForIXP(connectionList, ixpList) {
     if (!connectionList || !connectionList.length) return 'No colocation data';
-
-    // Assuming the first connection's ixp_id is what we need. Adjust as necessary.
     let ixpId = connectionList[0].ixp_id;
     let ixp = ixpList.find(ix => ix.ixp_id === ixpId);
-
     return ixp && ixp.switch && ixp.switch.length ? ixp.switch[0].colo : 'No colocation data';
+}
+
+function sortTable(table, columnIndex, header) {
+    let sortDirection = header.getAttribute('data-sort-direction');
+    let multiplier = sortDirection === 'asc' ? 1 : -1;
+    let rows = Array.from(table.getElementsByTagName('tr')).slice(1);
+    let sortedRows = rows.sort((a, b) => {
+        let textA = a.cells[columnIndex].textContent;
+        let textB = b.cells[columnIndex].textContent;
+        return textA.localeCompare(textB) * multiplier;
+    });
+
+    // Toggle the sort direction
+    header.setAttribute('data-sort-direction', sortDirection === 'asc' ? 'desc' : 'asc');
+
+    while (table.rows.length > 1) {
+        table.deleteRow(1);
+    }
+    sortedRows.forEach(row => table.appendChild(row));
+}
+
+function addSearchFunctionality() {
+    let input = document.createElement('input');
+    input.setAttribute('id', 'search-input');
+    input.className = 'form-control';
+    input.setAttribute('type', 'text');
+    input.setAttribute('placeholder', 'Search...');
+    input.addEventListener('keyup', filterTable);
+    document.getElementById('table-container').prepend(input);
+}
+
+function filterTable() {
+    let input = document.getElementById('search-input');
+    let filter = input.value.toUpperCase();
+    let table = document.getElementById('members-table');
+    let tr = table.getElementsByTagName('tr');
+
+    for (let i = 1; i < tr.length; i++) {
+        let row = tr[i];
+        let text = Array.from(row.getElementsByTagName('td')).map(td => td.textContent).join(' ');
+        row.style.display
+    }
 }
