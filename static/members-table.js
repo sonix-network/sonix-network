@@ -39,7 +39,7 @@ function createTable(members, ixpList) {
 function createTableHead(table) {
     let thead = table.createTHead();
     let headerRow = thead.insertRow();
-    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation'];
+    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation', 'Speed across sites'];
     headers.forEach((text, index) => {
         let th = document.createElement('th');
         th.textContent = text;
@@ -81,7 +81,7 @@ function createTableBody(table, members, ixpList) {
             }, 0);
         }, 0);
         let totalSpeedGbps = (totalSpeedMbps / 1000).toFixed(0); // Convert to Gbps
-        row.insertCell().textContent = `${totalSpeedGbps} G`;
+        row.insertCell().textContent = `${totalSpeedGbps}G`;
     });
 }
 
@@ -145,4 +145,15 @@ function filterTable() {
         let text = Array.from(row.getElementsByTagName('td')).map(td => td.textContent).join(' ');
         row.style.display = text.toUpperCase().includes(filter) ? '' : 'none';
     }
+}
+function calculateTotalSpeed(members) {
+    let totalSpeedMbps = members.reduce((total, member) => {
+        return total + member.connection_list.reduce((connectionTotal, connection) => {
+            return connectionTotal + connection.if_list.reduce((interfaceTotal, iface) => {
+                return interfaceTotal + iface.if_speed;
+            }, 0);
+        }, 0);
+    }, 0);
+    let totalSpeedTbps = (totalSpeedMbps / 1000000).toFixed(0); // Convert Mbps to Tbps
+    return totalSpeedTbps;
 }
