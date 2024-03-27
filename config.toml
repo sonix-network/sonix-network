@@ -6,6 +6,11 @@ defaultContentLanguage = "en"
 summaryLength = 70
 paginate = 10
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [module]
   [[module.imports]]
     path = "github.com/martignoni/hugo-notice"
@@ -80,7 +85,7 @@ paginate = 10
 [[menu.main]]
     name       = "MEMBERS"
     identifier = "menu.members"
-    url        = "https://manager.sonix.network/customer/details"
+    url        = "/members/"
     weight     = 5
 
 [[menu.main]]

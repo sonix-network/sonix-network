@@ -86,3 +86,32 @@
 .chart-box canvas {
   width: 100% !important;
 }
+
+#search-input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#members-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#members-table th {
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+#members-table th:hover {
+    background-color: #e8e8e8;
+}
+
+#members-table td, #members-table th {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#members-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
