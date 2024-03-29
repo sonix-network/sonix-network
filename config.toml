@@ -115,7 +115,7 @@ paginate = 10
 [[menu.main]]
     identifier = "join"
     name       = "Join"
-    url        = "https://forms.gle/xJ5CXbSWk8snzgND9"
+    url        = "/join/"
     weight     = 12
 
 [params]
