@@ -18,6 +18,15 @@
   "data": {
     "id": "node-vg4"
   }
+}, {
+  "data": {
+    "id": "node-ch"
+  }
+}, {
+  "data": {
+    "id": "node-sk1"
+  },
+  "classes": "todo"
 },
 {
   "data": {
@@ -33,4 +42,25 @@
     "target": "node-ixn"
   },
   "classes": "bezier"
+}, {
+  "data": {
+    "id": "kn7-ch-1",
+    "source": "node-kn7",
+    "target": "node-ch"
+  },
+  "classes": "bezier"
+}, {
+  "data": {
+    "id": "kn7-sk1-1",
+    "source": "node-kn7",
+    "target": "node-sk1"
+  },
+  "classes": "bezier-todo"
+}, {
+  "data": {
+    "id": "ixn-sk1-1",
+    "source": "node-ixn",
+    "target": "node-sk1"
+  },
+  "classes": "bezier-todo"
 }]

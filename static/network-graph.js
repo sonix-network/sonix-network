@@ -74,6 +74,8 @@ var tippyEdge = null;
     makeTippy(cy.getElementById('node-shg5'), 'SHG5').show();
     makeTippy(cy.getElementById('node-ixn'), 'IXN').show();
     makeTippy(cy.getElementById('node-vg4'), 'VG4').show();
+    makeTippy(cy.getElementById('node-ch'), 'CH').show();
+    makeTippy(cy.getElementById('node-sk1'), 'SK1').show();
   });
 
   cy.on('mouseup', function (e) {
