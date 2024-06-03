@@ -76,9 +76,9 @@ function createTableBody(table, members, ixpList) {
 
         // Calculate and display total connection speed in Gbps
         let totalSpeedMbps = member.connection_list.reduce((sum, connection) => {
-            return sum + connection.if_list.reduce((sumInner, iface) => {
+            return sum + (connection.if_list ? connection.if_list.reduce((sumInner, iface) => {
                 return sumInner + iface.if_speed;
-            }, 0);
+            }, 0) : 0);
         }, 0);
         let totalSpeedGbps = (totalSpeedMbps / 1000).toFixed(0); // Convert to Gbps
         row.insertCell().textContent = `${totalSpeedGbps}G`;
@@ -93,7 +93,7 @@ function getColoForIXP(connectionList, ixpList) {
     connectionList.forEach(connection => {
         let ixp = ixpList.find(ix => ix.ixp_id === connection.ixp_id);
         if (ixp && ixp.switch && ixp.switch.length) {
-            connection.if_list.forEach(iface => {
+            connection.if_list && connection.if_list.forEach(iface => {
                 let switchInfo = ixp.switch.find(sw => sw.id === iface.switch_id);
                 if (switchInfo) {
                     colos.push(switchInfo.colo);
@@ -110,11 +110,20 @@ function sortTable(table, columnIndex, header) {
     let sortDirection = header.getAttribute('data-sort-direction');
     let multiplier = sortDirection === 'asc' ? 1 : -1;
     let rows = Array.from(table.getElementsByTagName('tr')).slice(1);
-    let sortedRows = rows.sort((a, b) => {
-        let textA = a.cells[columnIndex].textContent;
-        let textB = b.cells[columnIndex].textContent;
-        return textA.localeCompare(textB) * multiplier;
-    });
+
+    if (columnIndex === 5) { // Assuming the speed column is the 6th column (0-indexed)
+        rows.sort((a, b) => {
+            let speedA = parseFloat(a.cells[columnIndex].textContent.replace('G', ''));
+            let speedB = parseFloat(b.cells[columnIndex].textContent.replace('G', ''));
+            return (speedA - speedB) * multiplier;
+        });
+    } else {
+        rows.sort((a, b) => {
+            let textA = a.cells[columnIndex].textContent;
+            let textB = b.cells[columnIndex].textContent;
+            return textA.localeCompare(textB) * multiplier;
+        });
+    }
 
     // Toggle the sort direction
     header.setAttribute('data-sort-direction', sortDirection === 'asc' ? 'desc' : 'asc');
@@ -122,7 +131,7 @@ function sortTable(table, columnIndex, header) {
     while (table.rows.length > 1) {
         table.deleteRow(1);
     }
-    sortedRows.forEach(row => table.appendChild(row));
+    rows.forEach(row => table.appendChild(row));
 }
 
 function addSearchFunctionality() {
@@ -134,6 +143,7 @@ function addSearchFunctionality() {
     input.addEventListener('keyup', filterTable);
     document.getElementById('table-container').prepend(input);
 }
+
 function filterTable() {
     let input = document.getElementById('search-input');
     let filter = input.value.toUpperCase();
@@ -146,12 +156,13 @@ function filterTable() {
         row.style.display = text.toUpperCase().includes(filter) ? '' : 'none';
     }
 }
+
 function calculateTotalSpeed(members) {
     let totalSpeedMbps = members.reduce((total, member) => {
         return total + member.connection_list.reduce((connectionTotal, connection) => {
-            return connectionTotal + connection.if_list.reduce((interfaceTotal, iface) => {
+            return connectionTotal + (connection.if_list ? connection.if_list.reduce((interfaceTotal, iface) => {
                 return interfaceTotal + iface.if_speed;
-            }, 0);
+            }, 0) : 0);
         }, 0);
     }, 0);
     let totalSpeedTbps = (totalSpeedMbps / 1000000).toFixed(0); // Convert Mbps to Tbps
