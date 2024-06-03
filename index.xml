@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SONIX</title>
+    <link>https://sonix.network/</link>
+    <description>Recent content on SONIX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://sonix.network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://sonix.network/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/contact/</guid>
+      <description>We are a community! Join us in the Matrix room #sonix:kamel.network.&#xA;Follow us on X and LinkedIn&#xA;Or cotact us directly via email at contact@sonix.network</description>
+    </item>
+    <item>
+      <title>Donate</title>
+      <link>https://sonix.network/donate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/donate/</guid>
+      <description>Support your local non-profit IX Why Donate? SONIX plays a crucial role in fostering a robust and open internet ecosystem. By supporting us, you contribute to:&#xA;Internet Accessibility: We strive to enhance internet accessibility for communities, businesses, and individuals.&#xA;Network Infrastructure: Your donation helps us maintain and upgrade the infrastructure, ensuring a reliable and efficient internet exchange platform.&#xA;How Your Donation Helps Your generous contribution will be allocated towards:&#xA;Infrastructure Maintenance: Ensuring the reliability and security of our internet exchange platform.</description>
+    </item>
+    <item>
+      <title>Exclusive SONIX 100GBASE-CWDM4 Module</title>
+      <link>https://sonix.network/gv1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/gv1/</guid>
+      <description>Congratulations! You have received the SONIX 100GBASE-CWDM4 module&#xA;If you&amp;rsquo;re here, you&amp;rsquo;ve discovered the QR code on our 100GBASE-CWDM4 module which can be used to connect at our exchange points across Sweden.&#xA;Key Features of the 100GBASE-CWDM4 Module 100G speed Gotta go fast!&#xA;2km Range: Ideal for extensive network setups, this module can efficiently handle connectivity over distances up to 2 kilometers.&#xA;RS-FEC Required: RS-FEC (Reed-Solomon Forward Error Correction) also known as CL91 (Clause 91) needs to be supported and enabled in your switch.</description>
+    </item>
+    <item>
+      <title>FAQ</title>
+      <link>https://sonix.network/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/faq/</guid>
+      <description>Frequently Asked Questions How much does a port cost? Nothing! All ports are currently for free. No setup cost, no monthly recurring cost.&#xA;Note&#xA;Think of the port price as the price to allocate a port in our equipment to you as a user. Usually this cost is quite high on many Internet Exchanges, but not on SONIX.&#xA;Wow, is everything really free? Compared to a conventional Internet Exchange, then yes.</description>
+    </item>
+    <item>
+      <title>Join SONIX</title>
+      <link>https://sonix.network/join/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/join/</guid>
+      <description> Loading… </description>
+    </item>
+    <item>
+      <title>Rules</title>
+      <link>https://sonix.network/rules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/rules/</guid>
+      <description>Version: 1.3&#xA;The following rules are applicable to the following SONIX IXPs:&#xA;SONIX Stockholm SONIX Gothenburg SONIX Malmo By connecting to an IXP part of SONIX you acknowledge the following.&#xA;General requirements At least one physical on-net link with SONIX equipment ASN assigned by RIR Settlement-free peering only; to exchange paid services between members that depends on SONIX is not allowed Members are not allowed to use the IX to exchange intra-organization traffic.</description>
+    </item>
+    <item>
+      <title>SONIX connected members</title>
+      <link>https://sonix.network/members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/members/</guid>
+      <description>Members </description>
+    </item>
+    <item>
+      <title>TRex Packet Generator</title>
+      <link>https://sonix.network/ops/trex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonix.network/ops/trex/</guid>
+      <description>TRex SONIX has a Cisco TRex running in Kista Gate. It can be accessed by SSH at speedtest.sonix.network for SONIX OPS.&#xA;Introduction TRex can run in a handful of modes, we run it in stateless mode. What this means to us is that TRex is a fast packet emitter that expects the packets it sends to return to the interface where it was sent. It does not care about anything related to sessions and not even neighbor discovery.</description>
+    </item>
+  </channel>
+</rss>
