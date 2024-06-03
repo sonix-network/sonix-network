@@ -39,7 +39,7 @@ function createTable(members, ixpList) {
 function createTableHead(table) {
     let thead = table.createTHead();
     let headerRow = thead.insertRow();
-    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation', 'Speed across sites'];
+    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation', 'IXP', 'Speed'];
     headers.forEach((text, index) => {
         let th = document.createElement('th');
         th.textContent = text;
@@ -54,56 +54,72 @@ function createTableHead(table) {
 function createTableBody(table, members, ixpList) {
     let tbody = table.createTBody();
     members.forEach(member => {
-        let row = tbody.insertRow();
-
-        // Make AS Number a link
-        let asCell = row.insertCell();
-        let link = document.createElement('a');
-        link.href = `https://www.peeringdb.com/asn/${member.asnum}`;
-        link.textContent = member.asnum;
-        link.target = "_blank";
-        asCell.appendChild(link);
-
-        // Format the member_since date
-        let memberSince = new Date(member.member_since).toISOString().split('T')[0];
-        row.insertCell().textContent = memberSince;
-
-        row.insertCell().textContent = member.name;
-        row.insertCell().textContent = member.peering_policy;
-
-        let colo = getColoForIXP(member.connection_list, ixpList);
-        row.insertCell().textContent = colo;
-
-        // Calculate and display total connection speed in Gbps
-        let totalSpeedMbps = member.connection_list.reduce((sum, connection) => {
-            return sum + (connection.if_list ? connection.if_list.reduce((sumInner, iface) => {
-                return sumInner + iface.if_speed;
-            }, 0) : 0);
-        }, 0);
-        let totalSpeedGbps = (totalSpeedMbps / 1000).toFixed(0); // Convert to Gbps
-        row.insertCell().textContent = `${totalSpeedGbps}G`;
+        if (member.connection_list && member.connection_list.length > 0) {
+            member.connection_list.forEach(connection => {
+                if (connection.if_list && connection.if_list.length > 0) {
+                    connection.if_list.forEach(iface => {
+                        let row = createTableRow(tbody, member, connection, iface, ixpList);
+                        tbody.appendChild(row);
+                    });
+                } else {
+                    let row = createTableRow(tbody, member, connection, null, ixpList);
+                    tbody.appendChild(row);
+                }
+            });
+        } else {
+            let row = createTableRow(tbody, member, null, null, ixpList);
+            tbody.appendChild(row);
+        }
     });
 }
 
-function getColoForIXP(connectionList, ixpList) {
-    if (!connectionList || !connectionList.length) return 'No colocation data';
+function createTableRow(tbody, member, connection, iface, ixpList) {
+    let row = tbody.insertRow();
 
-    let colos = [];
+    // Make AS Number a link
+    let asCell = row.insertCell();
+    let link = document.createElement('a');
+    link.href = `https://www.peeringdb.com/asn/${member.asnum}`;
+    link.textContent = member.asnum;
+    link.target = "_blank";
+    asCell.appendChild(link);
 
-    connectionList.forEach(connection => {
-        let ixp = ixpList.find(ix => ix.ixp_id === connection.ixp_id);
-        if (ixp && ixp.switch && ixp.switch.length) {
-            connection.if_list && connection.if_list.forEach(iface => {
-                let switchInfo = ixp.switch.find(sw => sw.id === iface.switch_id);
-                if (switchInfo) {
-                    colos.push(switchInfo.colo);
-                }
-            });
-        }
-    });
+    // Format the member_since date
+    let memberSince = new Date(member.member_since).toISOString().split('T')[0];
+    row.insertCell().textContent = memberSince;
 
-    // Remove duplicates and join the unique colocation sites
-    return [...new Set(colos)].join(', ');
+    row.insertCell().textContent = member.name;
+    row.insertCell().textContent = member.peering_policy;
+
+    let colo = connection ? getColoForConnection(connection, ixpList) : 'No colocation data';
+    row.insertCell().textContent = colo;
+
+    let ixpShortname = connection ? getIXPShortname(connection.ixp_id, ixpList) : 'Unknown IXP';
+    row.insertCell().textContent = ixpShortname;
+
+    // Display the connection speed in Gbps
+    let speedGbps = iface ? (iface.if_speed / 1000).toFixed(0) : '0';
+    row.insertCell().textContent = `${speedGbps}G`;
+
+    return row;
+}
+
+function getColoForConnection(connection, ixpList) {
+    let ixp = ixpList.find(ix => ix.ixp_id === connection.ixp_id);
+    if (ixp && ixp.switch && ixp.switch.length) {
+        let colos = (connection.if_list || []).map(iface => {
+            let switchInfo = ixp.switch.find(sw => sw.id === iface.switch_id);
+            return switchInfo ? switchInfo.colo : 'No colocation data';
+        });
+        // Remove duplicates and join the unique colocation sites
+        return [...new Set(colos)].join(', ');
+    }
+    return 'No colocation data';
+}
+
+function getIXPShortname(ixpId, ixpList) {
+    let ixp = ixpList.find(ix => ix.ixp_id === ixpId);
+    return ixp ? ixp.shortname : 'Unknown IXP';
 }
 
 function sortTable(table, columnIndex, header) {
@@ -111,7 +127,7 @@ function sortTable(table, columnIndex, header) {
     let multiplier = sortDirection === 'asc' ? 1 : -1;
     let rows = Array.from(table.getElementsByTagName('tr')).slice(1);
 
-    if (columnIndex === 5) { // Assuming the speed column is the 6th column (0-indexed)
+    if (columnIndex === 6) { // Assuming the speed column is the 7th column (0-indexed)
         rows.sort((a, b) => {
             let speedA = parseFloat(a.cells[columnIndex].textContent.replace('G', ''));
             let speedB = parseFloat(b.cells[columnIndex].textContent.replace('G', ''));
