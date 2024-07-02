@@ -42,7 +42,21 @@ per-port fee that we have to pass down to the user.
 
 ### Do you have Route Servers?
 
-Yes, we do and encourage all peers to connect. Currently we only have a route server in the Stockholm location. We are currently working on deploying route servers to other sites.
+Yes, we do and encourage all peers to connect.
+
+Our current route servers are:
+
+<div style="margin-left: 10px">
+
+| Location           | ASN     | IPv4              | IPv6                        |
+|--------------------|---------|-------------------|-----------------------------|
+| SONIX Stockholm #1 | AS61229 | `185.1.215.1`     | `2001:7f8:117::6:1229:1`    |
+| SONIX Malmö #1     | AS61229 | `193.201.148.129` | `2001:7f8:117:2:0:6:1229:1` |
+
+</div>
+
+We are currently working on deploying route servers to other sites as well
+as adding redundancy in the Stockholm location.
 
 ### What best practices do you recommend?
 
@@ -63,13 +77,19 @@ As long as it's settlement-free peering. E.g. free IPv6 transit is OK.
 
 We are prepared to quickly connect the following medias:
 
-**400G:** 400GBASE-LR4, 400GBASE-FR4  
-**200G:** 200GBASE-LR4, 200GBASE-FR4  
-**100G:** 100GBASE-CWDM4, 100GBASE-LR4, 100GBASE-LR1  
-**50G:** 50GBASE-LR, 50GBASE-ER  
-**40G:** 40GBASE-LR4  
-**25G:** 25GBASE-LR  
-**10G:** 10GBASE-LR  
+<div style="margin-left: 10px">
+
+|          | Transceivers                               |
+|----------|--------------------------------------------|
+| **400G** | 400GBASE-LR4, 400GBASE-FR4                 |
+| **200G** | 200GBASE-LR4, 200GBASE-FR4                 |
+| **100G** | 100GBASE-CWDM4, 100GBASE-LR4, 100GBASE-LR1 |
+| **50G**  | 50GBASE-LR, 50GBASE-ER                     |
+| **40G**  | 40GBASE-LR4                                |
+| **25G**  | 25GBASE-LR                                 |
+| **10G**  | 10GBASE-LR                                 |
+
+</div>
 
 Having trouble choosing? 100GBASE-CWDM4 is a good choice as 100G equipment is easy
 to come by and we have plent of modules in stock. So many modules in fact that

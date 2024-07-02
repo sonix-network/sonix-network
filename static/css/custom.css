@@ -141,3 +141,17 @@
         width: 50%;
   }
 }
+
+td, th {
+  padding: 0.6em;
+}
+table {
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  border-collapse: separate;
+  box-shadow: 10px 10px 5px lightgray;
+  margin-bottom: 20px;
+}
+body {
+  font-size: 16px;
+}
