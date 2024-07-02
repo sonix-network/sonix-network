@@ -95,3 +95,9 @@ networks we on-board.
 
 Want to help? Have a lookt at our [donation](/donate/) page to see what kind
 of equipment we need to make the site better.
+
+### Can I use your metrics for my own monitoring?
+
+Absolutely! We expose a Prometheus-compatible API at `https://metric.sonix.network/api/v1/`.
+
+Let us know if you end up using it, we would love to learn if people find it useful.
