@@ -25,8 +25,7 @@
 }, {
   "data": {
     "id": "node-sk1"
-  },
-  "classes": "todo"
+  }
 },
 {
   "data": {
@@ -44,6 +43,13 @@
   "classes": "bezier"
 }, {
   "data": {
+    "id": "kg-sk1-1",
+    "source": "node-kg",
+    "target": "node-sk1"
+  },
+  "classes": "bezier"
+}, {
+  "data": {
     "id": "kn7-ch-1",
     "source": "node-kn7",
     "target": "node-ch"
@@ -51,16 +57,9 @@
   "classes": "bezier"
 }, {
   "data": {
-    "id": "kn7-sk1-1",
-    "source": "node-kn7",
-    "target": "node-sk1"
-  },
-  "classes": "bezier-todo"
-}, {
-  "data": {
     "id": "ixn-sk1-1",
     "source": "node-ixn",
     "target": "node-sk1"
   },
-  "classes": "bezier-todo"
+  "classes": "bezier"
 }]
