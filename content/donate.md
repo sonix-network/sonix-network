@@ -41,6 +41,7 @@ have a high need for:
 
 - **20km+ DWDM equipment, 100Gbit/s+**
 - **DCI equipment, 100 Gbit/s+**
+- **100G and 400G ZR transceivers**
 - **ROADM equipment**
 
 Here are some other examples of equipment we have a need for:
