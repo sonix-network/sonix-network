@@ -23,22 +23,31 @@ Your generous contribution will be allocated towards:
 
 ## Ways to Contribute
 
+### Become a facility sponsor
+
+Right now we are looking for hosting space in **Equinix SK2**. Reach out if you
+are able to host about 500W of power and 4U of space.
+
 ### Donate Hardware
 
 We are always interested in different kinds of hardware, in particular we
 have a high need for:
 
-- 20km+ DWDM equipment, 10Gbit/s+
+- **20km+ DWDM equipment, 100Gbit/s+**
+- **DCI equipment, 100 Gbit/s+**
+- **ROADM equipment**
 
 Here are some other examples of equipment we have a need for:
 
-- Whitebox switches (especially ones on the [SONiC support list](https://sonic-net.github.io/SONiC/Supported-Devices-and-Platforms.html) or switches capable of running SONiC in general, we can undertake porting for interesting platforms)
-- Enterprise-class SSDs
-- 100G and faster network cards
-- QSFP28 and QSFP-DD transceivers
-- 1U shallow servers with low power usage
-- Fiber optical breakout cables
-- S3-compatible storage capacity
+- **Whitebox switches**
+  - Please no Tomahawk based ones (e.g. DX010, Wedge 100, etc.), we cannot use them for a lot of the things we do
+  - Especially ones on the [SONiC support list](https://sonic-net.github.io/SONiC/Supported-Devices-and-Platforms.html) or switches capable of running SONiC in general, we can undertake porting for interesting platforms
+- **Enterprise-class SSDs**
+- **100G and faster network cards**
+- **QSFP28 and QSFP-DD single-mode transceivers**
+- **1U shallow servers with low power usage**
+- **Fiber optical breakout cables**
+- **S3-compatible storage capacity**
 
 
 {{< mailto-button text="Contact us" email="donate@sonix.network" >}}
