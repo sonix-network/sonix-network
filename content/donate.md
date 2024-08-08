@@ -10,7 +10,7 @@ description= "Donation page"
 SONIX plays a crucial role in fostering a robust and open internet ecosystem. By supporting us, you contribute to:
 
 - **Internet Accessibility:** We strive to enhance internet accessibility for communities, businesses, and individuals.
- 
+
 - **Network Infrastructure:** Your donation helps us maintain and upgrade the infrastructure, ensuring a reliable and efficient internet exchange platform.
 
 ## How Your Donation Helps
@@ -27,6 +27,12 @@ Your generous contribution will be allocated towards:
 
 Right now we are looking for hosting space in **Equinix SK2**. Reach out if you
 are able to host about 500W of power and 4U of space.
+
+### Help extend our network
+
+Currently the patch panel in **Digital Realty Stockholm** is full and requires
+a upfront payment of approximately 50 000 SEK in order to upgrade to a larger
+panel. If your company is interested in footing this bill, please let us know!
 
 ### Donate Hardware
 
