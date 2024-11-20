@@ -4,7 +4,9 @@ theme = "hugo-universal-theme"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 summaryLength = 70
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [markup]
   [markup.goldmark]
@@ -138,6 +140,7 @@ paginate = 10
     logo_small = "img/logo.svg"
     contact_url = "/contact"
 
+    disqusShortname = ""
 [permalinks]
     posts = "/posts/:year/:month/:day/:filename/"
 
@@ -181,15 +184,16 @@ paginate = 10
 [params.see_more]
     enable = true
     icon = "fas fa-user-friends"
-    title = "Do you want to learn more?"
-    subtitle = "Join our Matrix channel and we would be happy to explain more!"
+    title = "Join the Conversation"
+    subtitle = "Have questions about Sonix?<br><br>Join our Matrix community and connect with our team and other partners.<br>It's the best place to get your questions answered and stay up-to-date on the latest developments."
     link_url = "/contact/"
-    link_text = "Contact us"
+    link_text = "Join the Community"
 
 [params.clients]
     enable = true
-    title = "Connected Networks"
-    subtitle = ""
+    title = "Meet our Sonix Friends"
+    subtitle = "Powering a Better Connected Sweden"
+    description = """These networks are part of the Sonix community, collaborating to build a faster, more affordable, and sustainable internet for Sweden. Learn more about our members and the different types of Sonix Friends (Facility Sponsors, Network Partners, Community Supporters) on our <a href="/members/">Members page</a>."""
 
 [params.recent_posts]
     enable = false
