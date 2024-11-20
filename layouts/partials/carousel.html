@@ -2,13 +2,12 @@
 {{ if gt (len .Site.Data.carousel) 0 }}
 <section>
     <div class="home-carousel">
-        {{ $valid_video := print "static/img/banner.mp4"| fileExists }}
+        {{ $valid_video := print "static/img/banner.mp4" | fileExists }}
         {{ if $valid_video }}
         <video playsinline autoplay muted loop>
-          <source src="img/banner.mp4" type="video/webm">
+            <source src="img/banner.mp4" type="video/webm">
         </video>
         {{ end }}
-        <div class="dark-mask"></div>
         <div class="container">
             <div class="homepage owl-carousel"
                 data-autoplay="{{ default true .Site.Params.CarouselHomepage.auto_play }}"
@@ -18,10 +17,14 @@
                 <div class="item">
                     <div class="row">
                         <div class="container-fluid">
-                            <h1>{{ .title | safeHTML}}</h1>
-                            <h2>{{ .description | safeHTML }}</h2>
+                            <div class="text-box">
+                                <h1>{{ .title | safeHTML }}</h1>
+                                <h2>{{ .description | safeHTML }}</h2>
+                                <a href="/join/" class="btn btn-template-transparent-black btn-lg">
+                                    Join the Network
+                                </a>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 {{ end }}

@@ -127,8 +127,8 @@ summaryLength = 70
 
     style = "blue"
 
-    about_us = """<p>Founded by a non-profit, SONIX will live as a community driven IXP. If you have an idea where SONIX can help out we would love to hear it!</p>"""
-    copyright = "Copyright (c) SONIX; all rights reserved."
+    about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden. Have an idea how we can help? We'd love to hear from you!</p>"""
+    copyright = "Copyright © SONIX 2024. All rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
