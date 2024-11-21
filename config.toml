@@ -127,7 +127,6 @@ summaryLength = 70
 
     style = "blue"
 
-    about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden. Have an idea how we can help? We'd love to hear from you!</p>"""
     copyright = "Copyright © SONIX 2024. All rights reserved."
 
     # Format dates with Go's time formatting
@@ -146,6 +145,26 @@ summaryLength = 70
 
 [params.topbar]
     enable = false
+
+[params.footer]
+about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden. Have an idea how we can help? We'd love to hear from you!</p>"""
+
+[params.footer.quick_links]
+links = [
+    { name = "Join the Network", url = "/join/" },
+    { name = "Join the Community", url = "/contact/" },
+    { name = "FAQ", url = "/faq/" },
+    { name = "Donations", url = "/donate/" },
+    { name = "Status", url = "https://status.sonix.network" }
+]
+
+[params.footer.social]
+links = [
+    { name = "Matrix", url = "https://matrix.to/#/#sonix:kamel.network" },
+    { name = "X", url = "https://x.com/sonix_network" },
+    { name = "LinkedIn", url = "https://www.linkedin.com/company/sonix-network" },
+    { name = "GitHub", url = "https://github.com/sonix-network" },
+]
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
