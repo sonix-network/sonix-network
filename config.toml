@@ -4,7 +4,9 @@ theme = "hugo-universal-theme"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 summaryLength = 70
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [markup]
   [markup.goldmark]
@@ -125,8 +127,7 @@ paginate = 10
 
     style = "blue"
 
-    about_us = """<p>Founded by a non-profit, SONIX will live as a community driven IXP. If you have an idea where SONIX can help out we would love to hear it!</p>"""
-    copyright = "Copyright (c) SONIX; all rights reserved."
+    copyright = "Copyright © SONIX 2024. All rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
@@ -138,11 +139,32 @@ paginate = 10
     logo_small = "img/logo.svg"
     contact_url = "/contact"
 
+    disqusShortname = ""
 [permalinks]
     posts = "/posts/:year/:month/:day/:filename/"
 
 [params.topbar]
     enable = false
+
+[params.footer]
+about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden. Have an idea how we can help? We'd love to hear from you!</p>"""
+
+[params.footer.quick_links]
+links = [
+    { name = "Join the Network", url = "/join/" },
+    { name = "Join the Community", url = "/contact/" },
+    { name = "FAQ", url = "/faq/" },
+    { name = "Donations", url = "/donate/" },
+    { name = "Status", url = "https://status.sonix.network" }
+]
+
+[params.footer.social]
+links = [
+    { name = "Matrix", url = "https://matrix.to/#/#sonix:kamel.network" },
+    { name = "X", url = "https://x.com/sonix_network" },
+    { name = "LinkedIn", url = "https://www.linkedin.com/company/sonix-network" },
+    { name = "GitHub", url = "https://github.com/sonix-network" },
+]
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
@@ -181,15 +203,16 @@ paginate = 10
 [params.see_more]
     enable = true
     icon = "fas fa-user-friends"
-    title = "Do you want to learn more?"
-    subtitle = "Join our Matrix channel and we would be happy to explain more!"
+    title = "Join the Conversation"
+    subtitle = "Have questions about Sonix?<br><br>Join our Matrix community and connect with our team and other partners.<br>It's the best place to get your questions answered and stay up-to-date on the latest developments."
     link_url = "/contact/"
-    link_text = "Contact us"
+    link_text = "Join the Community"
 
 [params.clients]
     enable = true
-    title = "Connected Networks"
-    subtitle = ""
+    title = "Meet our Sonix Friends"
+    subtitle = "Powering a Better Connected Sweden"
+    description = """These networks are part of the Sonix community, collaborating to build a faster, more affordable, and sustainable internet for Sweden. Learn more about our members and the different types of Sonix Friends (Facility Sponsors, Network Partners, Community Supporters) on our <a href="/members/">Members page</a>."""
 
 [params.recent_posts]
     enable = false
