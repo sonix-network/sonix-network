@@ -1,10 +1,6 @@
 .hugo_build.lock
 **/.*.sw?
 public
-<<<<<<< HEAD
 /public/
 .DS_Store
 **/.DS_Store
-=======
-/public/
->>>>>>> upstream/main
