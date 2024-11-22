@@ -235,6 +235,12 @@ section, div.section {
   padding: 60px 0;
 }
 
+/* Specific styles for the front page */
+.home .bar.background-pentagon {
+  border: none; /* Remove borders */
+  padding: 30px 0; /* Adjust padding */
+}
+
 .lead {
   text-align: center;
   margin-top: 20px;
