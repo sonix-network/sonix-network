@@ -124,13 +124,50 @@
 }
 
 #members-table {
-    width: 100%;
-    border-collapse: collapse;
+  table-layout: auto; /* Dynamically adjust column widths */
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
 }
 
 #members-table th {
-    cursor: pointer;
-    background-color: #f8f8f8;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  position: relative;
+  padding-right: 35px; /* Space for the arrows */
+  text-align: left; /* Align text to the left */
+  vertical-align: middle; /* Ensure text and arrows align vertically */
+  white-space: nowrap;
+}
+
+#members-table th .arrows {
+  position: absolute;
+  top: 50%; /* Center the arrows vertically */
+  right: 10px; /* Adjust distance from the right */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #aaa; /* Default arrow color */
+  pointer-events: none; /* Prevent interaction with the arrows */
+}
+
+#members-table th .arrows span {
+  line-height: 1; /* Ensure proper spacing between arrows */
+}
+
+#members-table th.active .arrows span.asc {
+  color: #000; /* Highlight ascending arrow when active */
+}
+
+#members-table th.active-desc .arrows span.desc {
+  color: #000; /* Highlight descending arrow when active */
+}
+
+#members-table th.active,
+#members-table th.active-desc {
+  background-color: #e0e0e0; /* Highlight the active column */
+  color: #000; /* Ensure text is visible */
 }
 
 #members-table th:hover {
@@ -161,6 +198,20 @@
     width: 100%;
     height: 100%;
     border: none;
+}
+
+@media 
+  (min-width: 768px) and (max-width: 1800px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 768px) and (max-width: 1800px) and (min-resolution: 192dpi) {
+  #members-table th .arrows {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  #members-table th .arrows {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -359,4 +410,25 @@ section, div.section {
 
 #copyright a:hover {
   text-decoration: underline;
+}
+
+/* Style the table exclusively */
+.faq-box {
+  background-color: #f9f9f9; /* Light gray background */
+  border: 1px solid #ddd;   /* Subtle border */
+  border-radius: 5px;       /* Rounded corners */
+  padding: 15px;            /* Inner padding */
+  margin-bottom: 30px;      /* Space below the box */
+  color: #333;              /* Ensure table text is neutral */
+}
+
+/* Manage spacing between the title (h3) and the faq-box */
+h3 + div table.faq-box {
+  margin-top: 10px; /* Adjusts space between the h3 and table */
+}
+
+/* Target only h3 elements that are immediately followed by a div containing a table with class .faq-box */
+h3:has(+ div > table.faq-box) {
+  color: #007acc; /* Blue color for FAQ question titles */
+  margin-bottom: 10px; /* Slight spacing below the title */
 }

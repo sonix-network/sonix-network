@@ -18,7 +18,7 @@ If you're here, you've discovered the QR code on our 100GBASE-CWDM4 module which
 ### Explore More and Get Involved
 - **Join SONIX:** Use the module you have recieved to connect to our internet exchange by [signing up](https://forms.gle/xJ5CXbSWk8snzgND9).
 
-- **Learn About Donations:** Your support is crucial. Visit our [donation page](/donate/) to see how you can help us continue to provide and improve these technologies.
+- **Learn About Contributions:** Your support is crucial. Visit [our Contributions page](/contribute/) to see how you can help us continue to provide and improve these technologies.
 
 ## Thank You for Your Interest!
 

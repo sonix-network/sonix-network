@@ -1,123 +1,199 @@
 +++
 title = "FAQ"
 description = "Frequently asked questions"
-keywords = ["FAQ","How do I","questions","what if"]
+keywords = ["FAQ", "How do I", "questions", "what if"]
 +++
 
-# Frequently Asked Questions
+# Frequently Asked Questions (FAQ)
 
-### How much does a port cost?
+We've compiled answers to some of the most common questions about SONIX. If you can't find what you're looking for, please don't hesitate to [contact us](/contact/) or join our [Matrix community](https://matrix.to/#/#sonix:kamel.network).
 
-Nothing! All ports are currently for free. No setup cost, no monthly recurring cost.
+---
 
-{{< notice note >}}
-Think of the **port price** as the price to allocate a port in our equipment
-to you as a user. Usually this cost is quite high on many Internet Exchanges,
-but not on SONIX.
-{{< /notice >}}
+## General Questions
 
-### Wow, is everything really free?
+### ➔ What is SONIX?
 
-Compared to a conventional Internet Exchange, then yes.
+{{% faq-box %}}
+SONIX is a non-profit Internet Exchange Point (IXP) dedicated to providing free and low-cost internet exchange services in Sweden.  
+Our mission is to create a faster, more affordable, and sustainable internet connectivity for everyone.
+{{% /faq-box %}}
 
-However, as you may know, extra costs to connect to your port may occur
-outside of our control. For example, certain locations requires a one-time fee
-to cover our sponsors ODF cost, and as usual you need to check with your
-datacenter sales contact what they charge to provide you with the fiber
-connection to our port.
+### ➔ What is an Internet Exchange Point (IXP)?
 
-Finally, if you require specific optics that we do not have in stock
-you need to pay our procurement price. Don't worry, we have plenty of 100G and
-10G modules to go around - and even if your specific optic is not in stock,
-we have excellent and cost effective suppliers, or you can simply mail
-a suitable module to us and we will be happy to use it.
+{{% faq-box %}}
+An Internet Exchange Point (IXP) is a physical and virtual infrastructure where different networks, such as Internet Service Providers (ISPs), content providers, and businesses, interconnect to exchange internet traffic directly. 
 
-#### What sites require a one-time cross-connect setup fee?
+Instead of routing traffic through multiple intermediary networks, an IXP enables direct interconnection, which offers several key benefits:
+- **Improved Performance:** By reducing the distance and number of hops traffic must travel, IXPs lower latency and improve data transfer speeds.
+- **Cost Efficiency:** Direct peering between networks reduces reliance on expensive transit providers, significantly lowering costs.
+- **Enhanced Reliability:** IXPs often provide a more stable connection, minimizing the risk of outages due to intermediate network failures.
+- **Scalability:** IXPs support high-volume traffic exchanges, essential for growing businesses and service providers.
 
-We try hard to find solutions that make everything free, but at some sites we
-cannot currently reach all the way. At these sites the sponsor will charge a
-per-port fee that we have to pass down to the user.
+SONIX provides these benefits across multiple locations in Sweden, empowering members with efficient, sustainable, and community-driven connectivity.
+{{% /faq-box %}}
 
- - Digital Realty Stockholm - 5740 SEK (~€500)
+### ➔ How do I connect to SONIX?
 
-### Do you have Route Servers?
+{{% faq-box %}}
+To get started, visit our [Join Page](/join/) or reach out via our [Contact Page](/contact/). Our team is here to guide you through the process of connecting your network to SONIX.
+{{% /faq-box %}}
 
-Yes, we do and encourage all peers to connect.
+### ➔ What does being an "Open IX" mean?
 
-Our current route servers are:
+{{% faq-box %}}
+At SONIX, being an "Open IX" means:
+- **Transparency:** We operate with full transparency, providing open access to our metrics and processes.
+- **Community-Driven:** SONIX is supported by a community of peers, sponsors, and volunteers working together to enhance internet connectivity in Sweden.
+- **Accessibility:** Our infrastructure is open and inclusive, welcoming networks of all sizes without membership fees or exclusive requirements.
+- **Open Source:** We rely on open-source technologies to innovate, collaborate, and contribute back to the global networking community.
 
-<div style="margin-left: 10px">
+We believe in creating a collaborative environment where everyone benefits from a more connected and sustainable internet.
+{{% /faq-box %}}
 
-| Location           | ASN     | IPv4              | IPv6                        |
-|--------------------|---------|-------------------|-----------------------------|
-| SONIX Stockholm #1 | AS61229 | `185.1.215.1`     | `2001:7f8:117::6:1229:1`    |
-| SONIX Malmö #1     | AS61229 | `193.201.148.129` | `2001:7f8:117:2:0:6:1229:1` |
+### ➔ How can it be free?
 
-</div>
+{{% faq-box %}}
+SONIX operates as a non-profit organization supported by:
+- **Donations:** Contributions from sponsors, partners, and community members help fund infrastructure maintenance and upgrades.
+- **Volunteering:** Dedicated volunteers and partners provide expertise, time, and resources to ensure SONIX remains operational.
+- **Reused Hardware:** We minimize costs by leveraging refurbished hardware and contributing to a greener internet.
 
-We are currently working on deploying route servers to other sites as well
-as adding redundancy in the Stockholm location.
+This community-driven approach allows us to offer free ports while maintaining a high-performance and reliable IXP.
+{{% /faq-box %}}
 
-### What best practices do you recommend?
+### ➔ Who is behind SONIX?
 
-We recommend:
+{{% faq-box %}}
+SONIX is operated by a Swedish non-profit organization committed to improving internet connectivity. It's a community-driven initiative supported by partners and volunteers.
+{{% /faq-box %}}
 
-- Ensure you are compliant with our [rules](/rules/).
-- Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.
+### ➔ What are SONIX's contributions to the SONiC NOS project?
 
-### What MTU is used?
+{{% faq-box %}}
+SONIX actively contributes to the open-source SONiC Network Operating System (NOS) project, which powers our infrastructure. SONiC is a robust, modular NOS designed for large-scale networks, and our contributions help:
+- Improve SONiC’s compatibility with a broader range of hardware.
+- Develop features tailored for IXPs and community-driven networks.
+- Strengthen the open-source community by sharing innovations and technical improvements.
 
-We use MTU 9000.
+You can learn more about SONiC at [sonicfoundation.dev](https://sonicfoundation.dev).
+{{% /faq-box %}}
 
-### Do you allow Transit peering over the IX?
+### ➔ What equipment is required to connect to SONIX?
 
-As long as it's settlement-free peering. E.g. free IPv6 transit is OK.
+{{% faq-box %}}
+Participants need compatible networking equipment capable of handling our supported media and port speeds (10G to 400G). Specific requirements depend on your use case, but our team is happy to assist. Contact us for more details.
+{{% /faq-box %}}
 
-### What media do you support?
+### ➔ Are there any guidelines for using SONIX?
 
-We are prepared to quickly connect the following medias:
+{{% faq-box %}}
+Yes, all participants must adhere to our [Rules](/rules/). These rules ensure fair and efficient usage of our services while maintaining technical integrity across the network.
+{{% /faq-box %}}
 
-<div style="margin-left: 10px">
+---
 
-|          | Transceivers                               |
-|----------|--------------------------------------------|
-| **400G** | 400GBASE-LR4, 400GBASE-FR4                 |
-| **200G** | 200GBASE-LR4, 200GBASE-FR4                 |
-| **100G** | 100GBASE-CWDM4, 100GBASE-LR4, 100GBASE-LR1 |
-| **50G**  | 50GBASE-LR, 50GBASE-ER                     |
-| **40G**  | 40GBASE-LR4                                |
-| **25G**  | 25GBASE-LR                                 |
-| **10G**  | 10GBASE-LR                                 |
+## Cost & Connectivity
 
-</div>
+### ➔ How much does a port cost?
 
-Having trouble choosing? 100GBASE-CWDM4 is a good choice as 100G equipment is easy
-to come by and we have plent of modules in stock. So many modules in fact that
-we are offering them free of charge.
+{{% faq-box %}}
+Nothing! All ports are free, with no setup or monthly fees.
+{{% /faq-box %}}
 
-Require something else? As long as it is between 10G-400G chances
-are that we can find a solution that fits. Contact us!
+### ➔ Are there any third-party costs?
 
-### Bring your own transceiver (BYOT) allowed?
+{{% faq-box %}}
+Although SONIX does not charge for ports, connecting to them might involve third-party costs. These include cross-connect fees and data center charges, which vary depending on your location and provider. Known current external costs include:
 
-Yes! If it's QSFP28 or QSFP+ compatible. For 400G we support QSFP-DD.
+| **Location**              | **Recurring Fee**   | **Setup Fee** |
+|----------------------------|---------------------|---------------|
+| [Digital Realty Stockholm](https://peeringdb.com/fac/208) | N/A                 | 5740 SEK (~€500) |
+| [Malmö Västergatan 4](https://peeringdb.com/fac/484)       | 50 SEK/month        | 0 SEK            |
 
-### Got any transceivers I can use in my own equipment to connect to SONIX?
+Please confirm costs with your data center or provider to ensure accurate budgeting.
+{{% /faq-box %}}
 
-Yes! We have 100GBASE-CWDM4 we can give you free of charge, and we are happy to
-provide other transceivers at cost price.
+---
 
-### Why do you have sites that are invite only?
+## Technical Questions
 
-It boils down to what connectivity we can manage to secure from our sponsors.
-If a site is known to have large networks, we need to be selective on which
-networks we on-board.
+### ➔ Where are your locations?
 
-Want to help? Have a lookt at our [donation](/donate/) page to see what kind
-of equipment we need to make the site better.
+{{% faq-box %}}
+SONIX operates in these locations across Sweden:
 
-### Can I use your metrics for my own monitoring?
+| **City**     | **Locations**                                                                                           |
+|--------------|---------------------------------------------------------------------------------------------------------|
+| **Stockholm** | [Obe Kista Gate](https://peeringdb.com/fac/5544), [Stokab KN7](https://peeringdb.com/fac/1053), [Digital Realty Stockholm](https://peeringdb.com/fac/208), [Equinix SK1](https://peeringdb.com/fac/156), [City Hosting](https://peeringdb.com/fac/14462) |
+| **Gothenburg** | [Gothnet DC Marieholm](https://peeringdb.com/fac/434), [Gothnet DC Backa](https://peeringdb.com/fac/9308) |
+| **Malmö**      | [Västergatan 4](https://peeringdb.com/fac/484) |
+{{% /faq-box %}}
 
-Absolutely! We expose a Prometheus-compatible API at `https://metric.sonix.network/api/v1/`.
+### ➔ Do you have Route Servers?
 
-Let us know if you end up using it, we would love to learn if people find it useful.
+{{% faq-box %}}
+Yes, we encourage all peers to connect:
+
+| **Location**         | **ASN**  | **IPv4**          | **IPv6**                  |
+|-----------------------|----------|-------------------|---------------------------|
+| SONIX Stockholm #1    | AS61229  | `185.1.215.1`     | `2001:7f8:117::6:1229:1`  |
+| SONIX Malmö #1        | AS61229  | `193.201.148.129` | `2001:7f8:117:2:0:6:1229:1` |
+
+We are working on deploying additional route servers and redundancy.
+{{% /faq-box %}}
+
+### ➔ What best practices do you recommend?
+
+{{% faq-box %}}
+- Follow our [rules](/rules/).
+- Configure BGP timers: **3s Keepalive** and **9s Hold**.
+{{% /faq-box %}}
+
+### ➔ What MTU is used?
+
+{{% faq-box %}}
+We use **MTU 9000**.
+{{% /faq-box %}}
+
+### ➔ Do you allow Transit Peering over the IX?
+
+{{% faq-box %}}
+Yes, settlement-free peering is allowed, including free IPv6 transit.
+{{% /faq-box %}}
+
+### ➔ What media do you support?
+
+{{% faq-box %}}
+We support the following transceivers:
+
+| **Speed** | **Transceivers**                       |
+|-----------|----------------------------------------|
+| 400G      | 400GBASE-LR4, 400GBASE-FR4            |
+| 200G      | 200GBASE-LR4, 200GBASE-FR4            |
+| 100G      | 100GBASE-CWDM4, 100GBASE-LR4, LR1     |
+| 50G       | 50GBASE-LR, 50GBASE-ER                |
+| 40G       | 40GBASE-LR4                           |
+| 25G       | 25GBASE-LR                            |
+| 10G       | 10GBASE-LR                            |
+
+We recommend **100GBASE-CWDM4** (available for free).
+{{% /faq-box %}}
+
+### ➔ Is BYOT (Bring Your Own Transceiver) allowed?
+
+{{% faq-box %}}
+Yes! We support QSFP28, QSFP+, and QSFP-DD (400G) compatible transceivers.
+{{% /faq-box %}}
+
+### ➔ Why are some IXP invite-only?
+
+{{% faq-box %}}
+Limited sponsor-provided connectivity at some sites makes selective onboarding necessary. [Learn how to support us.](/contribute/)
+{{% /faq-box %}}
+
+### ➔ Can I use your metrics for my monitoring?
+
+{{% faq-box %}}
+Yes! Use our [Prometheus-compatible API](https://metric.sonix.network/api/v1/) for integration. Let us know if you find it useful!
+{{% /faq-box %}}
