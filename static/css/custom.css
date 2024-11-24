@@ -432,3 +432,12 @@ h3:has(+ div > table.faq-box) {
   color: #007acc; /* Blue color for FAQ question titles */
   margin-bottom: 10px; /* Slight spacing below the title */
 }
+
+.social-icon {
+  width: 16px; /* Consistent size with other icons */
+  height: 16px; /* Ensure proportional dimensions */
+  vertical-align: middle; /* Align icon with text */
+  fill: rgb(170, 170, 170); /* Grey color for consistency */
+  stroke: rgb(170, 170, 170); /* Match stroke color to fill */
+  stroke-width: 1px; /* Make lines thicker for better visibility */
+}

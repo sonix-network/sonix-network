@@ -161,10 +161,10 @@ links = [
 
 [params.footer.social]
 links = [
-    { name = "Matrix", url = "https://matrix.to/#/#sonix:kamel.network" },
-    { name = "X", url = "https://x.com/sonix_network" },
-    { name = "LinkedIn", url = "https://www.linkedin.com/company/sonix-network" },
-    { name = "GitHub", url = "https://github.com/sonix-network" },
+    { name = "Matrix", url = "https://matrix.to/#/#sonix:kamel.network", icon = "custom-matrix" },
+    { name = "X", url = "https://x.com/sonix_network", icon = "fab fa-twitter" },
+    { name = "LinkedIn", url = "https://www.linkedin.com/company/sonix-network", icon = "fab fa-linkedin" },
+    { name = "GitHub", url = "https://github.com/sonix-network", icon = "fab fa-github" },
 ]
 
 # Enable and disable widgets for the right sidebar
