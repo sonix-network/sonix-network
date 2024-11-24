@@ -433,11 +433,52 @@ h3:has(+ div > table.faq-box) {
   margin-bottom: 10px; /* Slight spacing below the title */
 }
 
-.social-icon {
+.social-icon-footer {
   width: 16px; /* Consistent size with other icons */
   height: 16px; /* Ensure proportional dimensions */
   vertical-align: middle; /* Align icon with text */
   fill: rgb(170, 170, 170); /* Grey color for consistency */
   stroke: rgb(170, 170, 170); /* Match stroke color to fill */
   stroke-width: 1px; /* Make lines thicker for better visibility */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* Align icons to the left */
+  align-items: center; /* Vertically align icons */
+  gap: 15px; /* Even spacing between icons */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  margin-bottom: 40px; /* Increased gap below icons */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 12px; /* Adjust spacing between icons */
+  margin-bottom: 20px; /* Slightly bigger gap to next section */
+}
+
+.social-icons svg {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon span {
+  display: block;
+  margin-top: 6px; /* Space between icon and text */
+  font-size: 12px; /* Text size for labels */
+}
+
+.social-icon-svg {
+  width: 50px; /* Consistent width for icons */
+  height: 50px; /* Consistent height for icons */
+  fill: currentColor; /* Ensure icons respect respective brand colors */
+}
+
+.social-icon:hover svg, .social-icon:hover i {
+  opacity: 0.8; /* Slight hover effect */
+}
+
+.social-icon:hover span {
+  color: #007acc; /* Highlight label on hover */
 }
