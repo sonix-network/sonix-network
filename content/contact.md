@@ -61,9 +61,9 @@ For technical questions or issues, check our [FAQ](/faq/) or reach out to our su
 
 ## Why Reach Out?
 
-- 🚀 **Join SONIX:** Ready to connect your network to SONIX? Visit our [Join Page](/join/) to start the process.
-- 📞 **General Inquiries:** Learn more about our mission, services, or how we can collaborate.
-- ❤️ **Contribute:** Interested in supporting SONIX? Visit our [Contributions Page](/contribute/) or ask us how you can help.
+- **Join SONIX:** Ready to connect your network to SONIX? Visit our [Join Page](/join/) to start the process.
+- **General Inquiries:** Learn more about our mission, services, or how we can collaborate.
+- **Contribute:** Interested in supporting SONIX? Visit our [Contributions Page](/contribute/) or ask us how you can help.
 
 ---
 
