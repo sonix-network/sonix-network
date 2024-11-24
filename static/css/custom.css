@@ -28,7 +28,7 @@
    background: url(../img/carousel-switch-new.webp) center center repeat;
    position: relative;
    overflow: hidden;
-   min-height: 340px;
+   min-height: 492px;
  }
 
  .dark-mask {
@@ -233,6 +233,12 @@ section, div.section {
 
 .bar.background-pentagon.no-mb {
   padding: 60px 0;
+}
+
+/* Specific styles for the front page */
+.home .bar.background-pentagon {
+  border: none; /* Remove borders */
+  padding: 30px 0; /* Adjust padding */
 }
 
 .lead {
