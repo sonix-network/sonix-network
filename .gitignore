@@ -1,6 +1,4 @@
 .hugo_build.lock
 **/.*.sw?
-public
 /public/
-.DS_Store
 **/.DS_Store
