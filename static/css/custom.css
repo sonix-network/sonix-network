@@ -362,16 +362,37 @@ section, div.section {
   padding: 40px 0;
 }
 
-#footer h4 {
-  font-size: 1.2rem;
+#footer .container {
+  max-width: 1200px; /* Match the main page's max width */
+  margin: 0 auto;
+}
+
+.footer-about {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+}
+
+.footer-logo-icon {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
   margin-bottom: 20px;
-  color: #fff;
+}
+
+.footer-about-text {
+  flex: 1;
+}
+
+.footer-links,
+.footer-social {
+  text-align: left;
 }
 
 #footer ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 #footer ul li {
@@ -482,3 +503,4 @@ h3:has(+ div > table.faq-box) {
 .social-icon:hover span {
   color: #007acc; /* Highlight label on hover */
 }
+
