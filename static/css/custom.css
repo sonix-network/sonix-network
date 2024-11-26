@@ -206,12 +206,18 @@
   #members-table th .arrows {
     display: flex;
   }
+  #topbar .container {
+        flex-wrap: nowrap; /* Prevent wrapping on retina displays */
+    }
 }
 
 @media (max-width: 768px) {
   #members-table th .arrows {
     display: none;
   }
+  #topbar {
+    display: none;
+}
 }
 
 @media (min-width: 768px) {
@@ -504,3 +510,50 @@ h3:has(+ div > table.faq-box) {
   color: #007acc; /* Highlight label on hover */
 }
 
+#topbar {
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+  padding: 15px 0;
+}
+
+#topbar .container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#topbar .topbar-metrics {
+  grid-column: 1;
+}
+
+#topbar .topbar-metric {
+  color: #aaa;
+  font-size: 1.25rem; /* Larger font size */
+  white-space: nowrap;
+  margin-right: 30px; /* Increased spacing between metrics */
+}
+
+#topbar .topbar-metric:hover {
+  cursor: default;
+  color: #007bff;
+}
+
+#topbar .topbar-links {
+  grid-column: 2;
+  text-align: right;
+}
+
+#topbar .topbar-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1.25rem; /* Larger font size */
+  margin-left: 20px; /* Increased spacing between links */
+}
+
+#topbar .topbar-links a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}

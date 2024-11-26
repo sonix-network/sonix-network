@@ -67,7 +67,7 @@ summaryLength = 70
     parent     = "section.ops"
 
 [[menu.main]]
-    name       = "Grafana"
+    name       = "Metrics"
     url        = "https://metric.sonix.network"
     weight     = 2
     parent     = "section.services"
@@ -145,7 +145,15 @@ summaryLength = 70
     posts = "/posts/:year/:month/:day/:filename/"
 
 [params.topbar]
-    enable = false
+    enable = true
+
+[params.topbar.services]
+    links = [
+        { name = "Status", url = "https://status.sonix.network" },
+        { name = "Metrics", url = "https://metric.sonix.network" },
+        { name = "PeeringDB", url = "https://peeringdb.com/ix/3607" },
+        { name = "IXP Manager", url = "https://manager.sonix.network/" }
+    ]
 
 [params.footer]
 about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden.</p>"""
@@ -225,3 +233,7 @@ links = [
   category = "categories"
   tag = "tags"
   author = "authors"
+
+[params.metrics]
+    peak_traffic = "51.2 GiB/s"
+    connected_peers = "51"
