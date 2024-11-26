@@ -1,7 +1,5 @@
-<div>
-    <table class="faq-box">
-      <tr>
-        <td>{{ .Inner | markdownify }}</td>
-      </tr>
-    </table>
+<div class="faq-box">
+  <div class="responsive-table-wrapper">
+      {{ .Inner | markdownify }}
   </div>
+</div>

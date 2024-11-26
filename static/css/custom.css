@@ -207,7 +207,7 @@
     display: flex;
   }
   #topbar .container {
-        flex-wrap: nowrap; /* Prevent wrapping on retina displays */
+        flex-wrap: nowrap;
     }
 }
 
@@ -217,6 +217,17 @@
   }
   #topbar {
     display: none;
+  }
+  .faq .faq-box {
+    padding: 15px;
+    font-size: 14px;
+  }
+  .faq h3 {
+    font-size: 18px;
+  }
+  .faq .faq-box table {
+    font-size: 14px;
+    line-height: 1.6;
 }
 }
 
@@ -439,25 +450,53 @@ section, div.section {
   text-decoration: underline;
 }
 
-/* Style the table exclusively */
-.faq-box {
-  background-color: #f9f9f9; /* Light gray background */
-  border: 1px solid #ddd;   /* Subtle border */
-  border-radius: 5px;       /* Rounded corners */
-  padding: 15px;            /* Inner padding */
-  margin-bottom: 30px;      /* Space below the box */
-  color: #333;              /* Ensure table text is neutral */
+.faq .faq-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 
-/* Manage spacing between the title (h3) and the faq-box */
-h3 + div table.faq-box {
-  margin-top: 10px; /* Adjusts space between the h3 and table */
+.faq h3 {
+  color: #007acc;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
-/* Target only h3 elements that are immediately followed by a div containing a table with class .faq-box */
-h3:has(+ div > table.faq-box) {
-  color: #007acc; /* Blue color for FAQ question titles */
-  margin-bottom: 10px; /* Slight spacing below the title */
+.faq .responsive-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 10px;
+}
+
+.faq .faq-box table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.faq .faq-box table th,
+.faq .faq-box table td {
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.faq .faq-box table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
 }
 
 .social-icon-footer {

@@ -3,6 +3,7 @@ title = "FAQ"
 description = "Frequently asked questions"
 keywords = ["FAQ", "How do I", "questions", "what if"]
 +++
+<div class="faq">
 
 # Frequently Asked Questions (FAQ)
 
@@ -197,3 +198,5 @@ Limited sponsor-provided connectivity at some sites makes selective onboarding n
 {{% faq-box %}}
 Yes! Use our [Prometheus-compatible API](https://metric.sonix.network/api/v1/) for integration. Let us know if you find it useful!
 {{% /faq-box %}}
+
+</div>
