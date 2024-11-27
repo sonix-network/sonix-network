@@ -149,10 +149,10 @@ summaryLength = 70
 
 [params.topbar.services]
     links = [
-        { name = "Status", url = "https://status.sonix.network" },
         { name = "Metrics", url = "https://metric.sonix.network" },
         { name = "PeeringDB", url = "https://peeringdb.com/ix/3607" },
-        { name = "IXP Manager", url = "https://manager.sonix.network/" }
+        { name = "IXP Manager", url = "https://manager.sonix.network/" },
+        { name = "Status", url = "https://status.sonix.network" }
     ]
 
 [params.footer]
