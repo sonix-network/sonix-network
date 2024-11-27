@@ -8,7 +8,7 @@ keywords = ["sonix friends", "connected networks", "membership", "members"]
 
 ## What Are SONIX Friends?
 
-At SONIX, we call our members "SONIX Friends." These are the networks, organizations, and individuals who connect to our Internet Exchange Points (IXPs) and support our mission of improving Sweden’s internet connectivity. Being a SONIX Friend is about more than just connecting—it’s about contributing to a better-connected, more sustainable future.
+At SONIX, we call our members "SONIX Friends". These are the networks, organizations, and individuals who connect to our Internet Exchange Points (IXPs) or that just supports our mission of improving Sweden’s internet connectivity. Being a SONIX Friend is about more than just connecting—it’s about contributing to a better-connected, more sustainable future.
 
 ---
 

@@ -172,7 +172,7 @@ We support the following transceivers:
 |-----------|----------------------------------------|
 | 400G      | 400GBASE-LR4, 400GBASE-FR4            |
 | 200G      | 200GBASE-LR4, 200GBASE-FR4            |
-| 100G      | 100GBASE-CWDM4, 100GBASE-LR4, LR1     |
+| 100G      | 100GBASE-CWDM4, 100GBASE-LR4, 100GBASE-LR1, 100GBASE-FR1     |
 | 50G       | 50GBASE-LR, 50GBASE-ER                |
 | 40G       | 40GBASE-LR4                           |
 | 25G       | 25GBASE-LR                            |
