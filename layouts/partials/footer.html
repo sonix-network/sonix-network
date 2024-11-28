@@ -60,6 +60,7 @@
             <p class="pull-left">{{ .Site.Params.copyright | safeHTML }}</p>
             {{ end }}
             <p class="pull-right">
+            Generated from git revision {{ .GitInfo.AbbreviatedHash | safeHTML }}
             <!-- Template by Bootstrapious, ported by DevCows. MIT License -->
             </p>
         </div>
