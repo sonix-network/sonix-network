@@ -60,7 +60,7 @@
             <p class="pull-left">{{ .Site.Params.copyright | safeHTML }}</p>
             {{ end }}
             <p class="pull-right">
-            Generated from git revision {{ .Site.Params.githash | safeHTML }}
+            Generated from git revision <a href="https://github.com/sonix-network/sonix-network/commit/{{ .Site.Params.githash | safeHTML }}">{{ .Site.Params.githash | safeHTML }}</a>
             <!-- Template by Bootstrapious, ported by DevCows. MIT License -->
             </p>
         </div>
