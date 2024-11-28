@@ -52,10 +52,11 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: Etc/UTC
         run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+          env HUGO_PARAMS_githash="$(git describe --match=NeVeRmAtCh --always --abbrev=8 --dirty)" \
+            hugo \
+              --gc \
+              --minify \
+              --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

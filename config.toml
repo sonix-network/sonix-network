@@ -125,6 +125,7 @@ enableGitInfo = true
     author = "SONIX"
     mainSections = []
     defaultDescription = "Open Internet Exchange for Everybody"
+    githash = "N/A"
 
     style = "blue"
 
