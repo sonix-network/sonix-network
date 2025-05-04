@@ -124,13 +124,50 @@
 }
 
 #members-table {
-    width: 100%;
-    border-collapse: collapse;
+  table-layout: auto; /* Dynamically adjust column widths */
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
 }
 
 #members-table th {
-    cursor: pointer;
-    background-color: #f8f8f8;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  position: relative;
+  padding-right: 35px; /* Space for the arrows */
+  text-align: left; /* Align text to the left */
+  vertical-align: middle; /* Ensure text and arrows align vertically */
+  white-space: nowrap;
+}
+
+#members-table th .arrows {
+  position: absolute;
+  top: 50%; /* Center the arrows vertically */
+  right: 10px; /* Adjust distance from the right */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #aaa; /* Default arrow color */
+  pointer-events: none; /* Prevent interaction with the arrows */
+}
+
+#members-table th .arrows span {
+  line-height: 1; /* Ensure proper spacing between arrows */
+}
+
+#members-table th.active .arrows span.asc {
+  color: #000; /* Highlight ascending arrow when active */
+}
+
+#members-table th.active-desc .arrows span.desc {
+  color: #000; /* Highlight descending arrow when active */
+}
+
+#members-table th.active,
+#members-table th.active-desc {
+  background-color: #e0e0e0; /* Highlight the active column */
+  color: #000; /* Ensure text is visible */
 }
 
 #members-table th:hover {
@@ -161,6 +198,37 @@
     width: 100%;
     height: 100%;
     border: none;
+}
+
+@media 
+  (min-width: 768px) and (max-width: 1800px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 768px) and (max-width: 1800px) and (min-resolution: 192dpi) {
+  #members-table th .arrows {
+    display: flex;
+  }
+  #topbar .container {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+  #members-table th .arrows {
+    display: none;
+  }
+  #topbar {
+    display: none;
+  }
+  .faq .faq-box {
+    padding: 15px;
+    font-size: 14px;
+  }
+  .faq h3 {
+    font-size: 18px;
+  }
+  .faq .faq-box table {
+    font-size: 14px;
+    line-height: 1.6;
+}
 }
 
 @media (min-width: 768px) {
@@ -311,16 +379,37 @@ section, div.section {
   padding: 40px 0;
 }
 
-#footer h4 {
-  font-size: 1.2rem;
+#footer .container {
+  max-width: 1200px; /* Match the main page's max width */
+  margin: 0 auto;
+}
+
+.footer-about {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+}
+
+.footer-logo-icon {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
   margin-bottom: 20px;
-  color: #fff;
+}
+
+.footer-about-text {
+  flex: 1;
+}
+
+.footer-links,
+.footer-social {
+  text-align: left;
 }
 
 #footer ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 #footer ul li {
@@ -358,5 +447,152 @@ section, div.section {
 }
 
 #copyright a:hover {
+  text-decoration: underline;
+}
+
+.faq .faq-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.faq h3 {
+  color: #007acc;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.faq .responsive-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 10px;
+}
+
+.faq .faq-box table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.faq .faq-box table th,
+.faq .faq-box table td {
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.faq .faq-box table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.social-icon-footer {
+  width: 16px; /* Consistent size with other icons */
+  height: 16px; /* Ensure proportional dimensions */
+  vertical-align: middle; /* Align icon with text */
+  fill: rgb(170, 170, 170); /* Grey color for consistency */
+  stroke: rgb(170, 170, 170); /* Match stroke color to fill */
+  stroke-width: 1px; /* Make lines thicker for better visibility */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* Align icons to the left */
+  align-items: center; /* Vertically align icons */
+  gap: 15px; /* Even spacing between icons */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  margin-bottom: 40px; /* Increased gap below icons */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 12px; /* Adjust spacing between icons */
+  margin-bottom: 20px; /* Slightly bigger gap to next section */
+}
+
+.social-icons svg {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon span {
+  display: block;
+  margin-top: 6px; /* Space between icon and text */
+  font-size: 12px; /* Text size for labels */
+}
+
+.social-icon-svg {
+  width: 50px; /* Consistent width for icons */
+  height: 50px; /* Consistent height for icons */
+  fill: currentColor; /* Ensure icons respect respective brand colors */
+}
+
+.social-icon:hover svg, .social-icon:hover i {
+  opacity: 0.8; /* Slight hover effect */
+}
+
+.social-icon:hover span {
+  color: #007acc; /* Highlight label on hover */
+}
+
+#topbar {
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+  padding: 15px 0;
+}
+
+#topbar .container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#topbar .topbar-metrics {
+  grid-column: 1;
+}
+
+#topbar .topbar-metric {
+  color: #aaa;
+  font-size: 1.25rem; /* Larger font size */
+  white-space: nowrap;
+  margin-right: 30px; /* Increased spacing between metrics */
+}
+
+#topbar .topbar-metric:hover {
+  cursor: default;
+  color: #007bff;
+}
+
+#topbar .topbar-links {
+  grid-column: 2;
+  text-align: right;
+}
+
+#topbar .topbar-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1.25rem; /* Larger font size */
+  margin-left: 20px; /* Increased spacing between links */
+}
+
+#topbar .topbar-links a:hover {
+  color: #007bff;
   text-decoration: underline;
 }

@@ -68,58 +68,59 @@ enableGitInfo = true
     parent     = "section.ops"
 
 [[menu.main]]
-    name       = "Grafana"
+    name       = "Metrics"
     url        = "https://metric.sonix.network"
-    weight     = 1
+    weight     = 2
     parent     = "section.services"
 
 [[menu.main]]
     name       = "PeeringDB"
     url        = "https://peeringdb.com/ix/3607"
-    weight     = 2
+    weight     = 3
     parent     = "section.services"
 
 [[menu.main]]
     name       = "IXP Manager"
     url        = "https://manager.sonix.network/"
-    weight     = 3
+    weight     = 4
     parent     = "section.services"
 
 [[menu.main]]
-    name       = "MEMBERS"
+    name       = "SONIX Friends"
     identifier = "menu.members"
     url        = "/members/"
-    weight     = 5
+    weight     = 60
 
 [[menu.main]]
     name       = "FAQ"
     identifier = "menu.faq"
     url        = "/faq/"
-    weight     = 6
+    weight     = 70
 
 [[menu.main]]
     name       = "Status"
     identifier = "menu.status"
     url        = "https://status.sonix.network"
-    weight     = 7
+    weight     = 1
+    parent     = "section.services"
 
 [[menu.main]]
     identifier = "contact"
-    name       = "Contact"
+    name       = "Contact Us"
     url        = "/contact/"
-    weight     = 10
+    weight     = 80
 
 [[menu.main]]
-    identifier = "donate"
-    name       = "Donate"
-    url        = "/donate/"
-    weight     = 11
+    identifier = "contribute"
+    name       = "Contribute"
+    url        = "/contribute/"
+    weight     = 90
 
 [[menu.main]]
     identifier = "join"
     name       = "Join"
     url        = "/join/"
-    weight     = 12
+    weight     = 100
 
 [params]
     author = "SONIX"
@@ -146,26 +147,34 @@ enableGitInfo = true
     posts = "/posts/:year/:month/:day/:filename/"
 
 [params.topbar]
-    enable = false
+    enable = true
+
+[params.topbar.services]
+    links = [
+        { name = "Metrics", url = "https://metric.sonix.network" },
+        { name = "PeeringDB", url = "https://peeringdb.com/ix/3607" },
+        { name = "IXP Manager", url = "https://manager.sonix.network/" },
+        { name = "Status", url = "https://status.sonix.network" }
+    ]
 
 [params.footer]
-about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden. Have an idea how we can help? We'd love to hear from you!</p>"""
+about_us = """<p>Sonix is a community-driven non-profit Internet Exchange Point (IXP) dedicated to building a better-connected Sweden.</p>"""
 
 [params.footer.quick_links]
 links = [
     { name = "Join the Network", url = "/join/" },
     { name = "Join the Community", url = "/contact/" },
     { name = "FAQ", url = "/faq/" },
-    { name = "Donations", url = "/donate/" },
+    { name = "Contribute", url = "/contribute/" },
     { name = "Status", url = "https://status.sonix.network" }
 ]
 
 [params.footer.social]
 links = [
-    { name = "Matrix", url = "https://matrix.to/#/#sonix:kamel.network" },
-    { name = "X", url = "https://x.com/sonix_network" },
-    { name = "LinkedIn", url = "https://www.linkedin.com/company/sonix-network" },
-    { name = "GitHub", url = "https://github.com/sonix-network" },
+    { name = "Matrix", url = "https://matrix.to/#/#sonix:kamel.network", icon = "custom-matrix" },
+    { name = "X", url = "https://x.com/sonix_network", icon = "custom-x" },
+    { name = "LinkedIn", url = "https://www.linkedin.com/company/sonix-network", icon = "fab fa-linkedin" },
+    { name = "GitHub", url = "https://github.com/sonix-network", icon = "fab fa-github" },
 ]
 
 # Enable and disable widgets for the right sidebar
@@ -226,3 +235,7 @@ links = [
   category = "categories"
   tag = "tags"
   author = "authors"
+
+[params.metrics]
+    peak_traffic = "51.2 GiB/s"
+    connected_peers = "51"

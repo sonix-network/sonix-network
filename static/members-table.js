@@ -43,10 +43,29 @@ function createTableHead(table) {
     headers.forEach((text, index) => {
         let th = document.createElement('th');
         th.textContent = text;
-        th.setAttribute('data-sort-direction', 'asc'); // Add data attribute for sort direction
+        th.setAttribute('data-sort-direction', 'asc'); // Default sort direction
+
+        // Add arrow container
+        let arrowContainer = document.createElement('div');
+        arrowContainer.className = 'arrows';
+
+        let ascArrow = document.createElement('span');
+        ascArrow.className = 'asc';
+        ascArrow.textContent = '▲'; // Ascending arrow
+
+        let descArrow = document.createElement('span');
+        descArrow.className = 'desc';
+        descArrow.textContent = '▼'; // Descending arrow
+
+        arrowContainer.appendChild(ascArrow);
+        arrowContainer.appendChild(descArrow);
+        th.appendChild(arrowContainer);
+
+        // Add click event for sorting
         th.addEventListener('click', () => {
             sortTable(table, index, th);
         });
+
         headerRow.appendChild(th);
     });
 }
@@ -127,7 +146,8 @@ function sortTable(table, columnIndex, header) {
     let multiplier = sortDirection === 'asc' ? 1 : -1;
     let rows = Array.from(table.getElementsByTagName('tr')).slice(1);
 
-    if (columnIndex === 6) { // Assuming the speed column is the 7th column (0-indexed)
+    // Sort logic
+    if (columnIndex === 6) { // Speed column
         rows.sort((a, b) => {
             let speedA = parseFloat(a.cells[columnIndex].textContent.replace('G', ''));
             let speedB = parseFloat(b.cells[columnIndex].textContent.replace('G', ''));
@@ -135,8 +155,8 @@ function sortTable(table, columnIndex, header) {
         });
     } else {
         rows.sort((a, b) => {
-            let textA = a.cells[columnIndex].textContent;
-            let textB = b.cells[columnIndex].textContent;
+            let textA = a.cells[columnIndex].textContent.trim();
+            let textB = b.cells[columnIndex].textContent.trim();
             return textA.localeCompare(textB) * multiplier;
         });
     }
@@ -144,6 +164,18 @@ function sortTable(table, columnIndex, header) {
     // Toggle the sort direction
     header.setAttribute('data-sort-direction', sortDirection === 'asc' ? 'desc' : 'asc');
 
+    // Highlight the active arrow
+    table.querySelectorAll('th').forEach(th => {
+        th.classList.remove('active', 'active-desc');
+    });
+
+    if (sortDirection === 'asc') {
+        header.classList.add('active');
+    } else {
+        header.classList.add('active-desc');
+    }
+
+    // Rebuild the table body with sorted rows
     while (table.rows.length > 1) {
         table.deleteRow(1);
     }

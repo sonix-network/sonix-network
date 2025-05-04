@@ -1,0 +1,16 @@
+<div id="topbar" class="bg-dark text-white py-2">
+    <div class="container d-grid">
+        <!-- Left Side: [Placeholder for Future Metrics counters] -->
+        <div class="topbar-metrics">
+        </div>
+
+        <!-- Right Side: Links -->
+        <div class="topbar-links text-end">
+            {{ range .Site.Params.topbar.services.links }}
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="ms-3">
+                {{ .name }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</div>
