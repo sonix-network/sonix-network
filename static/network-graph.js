@@ -1,89 +1,57 @@
-var tippyEdge = null;
-
-(function(){
-  var toJson = function(res){ return res.json(); };
-
-  var cy = window.cy = cytoscape({
-    container: document.getElementById('cy'),
-
-    layout: {
-      name: 'avsdf',
-      nodeSeparation: 120,
-      padding: 50,
-      animate: false,
+// Network topology data
+const networkData = {
+  nodes: [
+    // Main connected components - clustered closer together
+    { 
+      id: "IXN",
+      sphericalPosition: { latitude: 20, longitude: -30 }    // Upper left
     },
-    userZoomingEnabled: false,
-    userPanningEnabled: false,
-    style: fetch('/cy-style.json').then(toJson),
-    elements: fetch('/network-graph.json').then(toJson)
-  });
+    { 
+      id: "KG",
+      sphericalPosition: { latitude: 40, longitude: 0 }      // Top center
+    },
+    { 
+      id: "SK1",
+      sphericalPosition: { latitude: 20, longitude: 30 }     // Upper right
+    },
+    { 
+      id: "KN7",
+      sphericalPosition: { latitude: -10, longitude: 15 }    // Lower right
+    },
+    { 
+      id: "CH",
+      sphericalPosition: { latitude: -25, longitude: 30 }    // Bottom right
+    },
+    
+    // Isolated nodes - positioned far from the cluster
+    { 
+      id: "VG4",
+      sphericalPosition: { latitude: -60, longitude: -120 }  // Lower left, far
+    },
+    { 
+      id: "SHG5",
+      sphericalPosition: { latitude: 60, longitude: -150 }   // Upper left, far
+    }
+  ],
+  links: [
+    { source: "IXN", target: "KG", trafficIntensity: "high" },
+    { source: "KG", target: "SK1", trafficIntensity: "medium" },
+    { source: "KG", target: "KN7", trafficIntensity: "medium" },
+    { source: "KN7", target: "CH", trafficIntensity: "low" }
+  ]
+};
 
-  cy.ready(function(){
-    var makeTippy = function(ele, text){
-      var ref = ele.popperRef();
-
-      // Since tippy constructor requires DOM element/elements, create a placeholder
-      var dummyDomEle = document.createElement('div');
-
-      var tip = tippy( dummyDomEle, {
-        getReferenceClientRect: ref.getBoundingClientRect,
-        trigger: 'manual', // mandatory
-        // dom element inside the tippy:
-        content: function(){ // function can be better for performance
-          var div = document.createElement('div');
-
-          div.innerHTML = text;
-
-          return div;
-        },
-        // your own preferences:
-        arrow: true,
-        placement: 'bottom',
-        hideOnClick: false,
-        sticky: "reference",
-        zIndex: 10,
-
-        // if interactive:
-        interactive: true,
-        appendTo: document.body // or append dummyDomEle to document.body
-      } );
-
-      return tip;
-    };
-
-    cy.on('select', 'edge', function(evt){
-      var edge = evt.target;
-      console.log('Showing bandwidth usage for ' + edge.id() + ' (TODO)');
-
-      if (tippyEdge != null) {
-        tippyEdge.destroy();
-        tippyEdge = null;
-      }
-      tippyEdge = makeTippy(edge, 'Bandwidth Usage Here');
-      tippyEdge.show();
+// Initialize the topology when the window loads
+window.addEventListener('load', function() {
+  // Check if the initialization function exists
+  if (typeof window.nettopology !== 'undefined' && typeof window.nettopology.init === 'function') {
+    // Initialize with the network data and default options
+    window.nettopology.init({
+      data: networkData,
+      isDarkMode: false,
+      showControlPanel: false
     });
-
-    cy.on('unselect', 'edge', function(evt){
-      if (tippyEdge != null) {
-        tippyEdge.destroy();
-        tippyEdge = null;
-      }
-    });
-    makeTippy(cy.getElementById('node-kg'), 'KG').show();
-    makeTippy(cy.getElementById('node-kn7'), 'KN7').show();
-    makeTippy(cy.getElementById('node-shg5'), 'SHG5').show();
-    makeTippy(cy.getElementById('node-ixn'), 'IXN').show();
-    makeTippy(cy.getElementById('node-vg4'), 'VG4').show();
-    makeTippy(cy.getElementById('node-ch'), 'CH').show();
-    makeTippy(cy.getElementById('node-sk1'), 'SK1').show();
-  });
-
-  cy.on('mouseup', function (e) {
-    cy.fit(null, 50);
-  })
-})();
-
-window.onresize = function() {
-  cy.resize();
-  cy.fit(null, 50);
-}
+  } else {
+    console.error('Network topology visualization library not loaded');
+  }
+}); 
