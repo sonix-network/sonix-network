@@ -25,8 +25,7 @@ Your generous contribution will be allocated towards:
 
 ### Become a facility sponsor
 
-Right now we are looking for hosting space in **Equinix SK2**. Reach out if you
-are able to host about 500W of power and 4U of space.
+Right now we are looking for more site in Stockholm. Reach out if you are able to host about 300W of power and 2U of space.
 
 ### Help extend our network
 
