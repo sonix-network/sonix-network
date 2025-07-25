@@ -22,9 +22,10 @@ window.addEventListener('load', function() {
       speed: paginationSpeed,
       autoplay: autoplay,
       slidesPerView: slidesPerView,
-      grid: { rows: 2, fill: 'row' },
+      grid: { rows: 4, fill: 'row' },
       spaceBetween: 30,
       breakpoints: {
+        1200: { slidesPerView: Math.min(slidesPerView, 6) },
         990: { slidesPerView: Math.min(slidesPerView, 4) },
         768: { slidesPerView: Math.min(slidesPerView, 2) },
         480: { slidesPerView: 1 },

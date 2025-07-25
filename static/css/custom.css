@@ -259,6 +259,24 @@ section, div.section {
   margin-bottom: 0;
 }
 
+/* Clients carousel tweaks */
+.clients-section {
+  margin-bottom: 80px;
+}
+
+.customers-swiper .swiper-slide img {
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.customers-swiper .swiper-slide img:hover {
+  filter: grayscale(0%);
+}
+
+.customers-swiper .swiper-pagination {
+  margin-bottom: 20px;
+}
+
 .ix-location {
   text-align: center;
   margin-bottom: 20px;
