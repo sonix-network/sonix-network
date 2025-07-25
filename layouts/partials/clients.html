@@ -2,7 +2,7 @@
 {{ if .Site.Params.clients.enable }}
 {{ if isset .Site.Data "clients" }}
 {{ if gt (len .Site.Data.clients) 0 }}
-<section class="background-white no-mb">
+<section class="background-white clients-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -18,28 +18,30 @@
                   {{ .Site.Params.clients.description | safeHTML }}
                 </p>
 
-                <ul class="owl-carousel customers"
-                data-items="{{ default 6 .Site.Params.CarouselCustomers.items }}"
-                data-autoplay="{{ default false .Site.Params.CarouselCustomers.auto_play }}"
-                data-slide-speed="{{ default 2000 .Site.Params.CarouselCustomers.slide_speed }}"
-                data-pagination-speed="{{ default 1000 .Site.Params.CarouselCustomers.pagination_speed }}">
-                {{ range .Site.Data.clients }}
-                <li class="item" title="{{ .name }}">
-                    <div class="image-container">
-                        {{ if .url }}
-                          <a href="{{ .url }}" target="_blank">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy"/>
-                          </a>
-                        {{ else }}
-                          <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy"/>
-                        {{ end }}
+                <div class="customers-swiper swiper"
+                  data-items="{{ default 6 .Site.Params.CarouselCustomers.items }}"
+                  data-autoplay="{{ default false .Site.Params.CarouselCustomers.auto_play }}"
+                  data-slide-speed="{{ default 2000 .Site.Params.CarouselCustomers.slide_speed }}"
+                  data-pagination-speed="{{ default 1000 .Site.Params.CarouselCustomers.pagination_speed }}">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                  {{ range .Site.Data.clients }}
+                    <div class="swiper-slide" title="{{ .name }}">
+                        <div class="image-container">
+                            {{ if .url }}
+                              <a href="{{ .url }}" target="_blank">
+                                <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy"/>
+                              </a>
+                            {{ else }}
+                              <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy"/>
+                            {{ end }}
+                        </div>
+                        <p class="client-name">{{ .name }}</p>
                     </div>
-                    <p class="client-name">{{ .name }}</p>
-                </li>
-                {{ end }}
-            </ul>
-            <!-- /.owl-carousel -->
-            </div>
+                  {{ end }}
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </section>

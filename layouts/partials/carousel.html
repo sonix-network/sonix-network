@@ -9,27 +9,29 @@
         </video>
         {{ end }}
         <div class="container">
-            <div class="homepage owl-carousel"
+            <div class="homepage-swiper swiper"
                 data-autoplay="{{ default true .Site.Params.CarouselHomepage.auto_play }}"
                 data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
                 data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
-                {{ range sort .Site.Data.carousel "weight" }}
-                <div class="item">
-                    <div class="row">
-                        <div class="container-fluid">
-                            <div class="text-box">
-                                <h1>{{ .title | safeHTML }}</h1>
-                                <h2>{{ .description | safeHTML }}</h2>
-                                <a href="/join/" class="btn btn-template-transparent-black btn-lg">
-                                    Join the Network
-                                </a>
+                <div class="swiper-wrapper">
+                    {{ range sort .Site.Data.carousel "weight" }}
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="container-fluid">
+                                <div class="text-box">
+                                    <h1>{{ .title | safeHTML }}</h1>
+                                    <h2>{{ .description | safeHTML }}</h2>
+                                    <a href="/join/" class="btn btn-template-transparent-black btn-lg">
+                                        Join the Network
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    {{ end }}
                 </div>
-                {{ end }}
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- /.project owl-slider -->
         </div>
     </div>
 </section>

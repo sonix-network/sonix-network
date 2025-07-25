@@ -1,8 +1,8 @@
 <script language="javascript">
-var ul = document.querySelector('ul.customers');
-if (ul !== null) {
-    for (var i = ul.children.length; i >= 0; i--) {
-        ul.appendChild(ul.children[Math.random() * i | 0]);
+var wrapper = document.querySelector('.customers-swiper .swiper-wrapper');
+if (wrapper !== null) {
+    for (var i = wrapper.children.length; i >= 0; i--) {
+        wrapper.appendChild(wrapper.children[Math.random() * i | 0]);
     }
 }
 </script>
@@ -15,8 +15,9 @@ if (ul !== null) {
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
 <script src="{{ "js/front.js" | relURL }}"></script>
 
-<!-- owl carousel -->
-<script src="{{ "js/owl.carousel.min.js" | relURL }}"></script>
+<!-- swiper carousel -->
+<script src="{{ "js/swiper-bundle.min.js" | relURL }}"></script>
+<script src="{{ "js/swiper-init.js" | relURL }}"></script>
 
 <script src="https://bluecmd.github.io/network-topology-viz/nettopology.js"></script>
 <script src="/network-graph.js"></script>
