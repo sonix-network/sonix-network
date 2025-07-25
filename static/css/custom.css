@@ -196,8 +196,9 @@ body {
   font-weight: bold;
   color: #333;
   text-align: center;
-  margin-top: 0;
+  margin-top: 10px;
   line-height: 1.2;
+  min-height: 1.4em;
 }
 
 .full-width-quote {
@@ -262,6 +263,12 @@ section, div.section {
 /* Clients carousel tweaks */
 .clients-section {
   margin-bottom: 80px;
+}
+
+.customers-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .customers-swiper .swiper-slide img {
