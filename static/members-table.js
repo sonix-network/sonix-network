@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     addSearchFunctionality();
 });
 
+function displayFetchError() {
+    const container = document.getElementById('table-container');
+    if (container) {
+        container.innerHTML =
+            '<div class="alert alert-warning">Unable to load member list, please try again later</div>';
+    }
+}
+
 async function fetchDataAndCreateTable() {
     try {
         const response = await fetch('https://manager.sonix.network/api/v4/member-export/ixf/1.0');
@@ -15,9 +23,11 @@ async function fetchDataAndCreateTable() {
             createTable(data.member_list, data.ixp_list);
         } else {
             console.error('Required data not found in the response');
+            displayFetchError();
         }
     } catch (error) {
         console.error('Error:', error);
+        displayFetchError();
     }
 }
 
