@@ -9,8 +9,8 @@ if ($.cookie('themeLayout')) {
 }
 
 $(function () {
-  sliderHomepage()
-  sliders()
+  // sliderHomepage()
+  // sliders()
   fullScreenContainer()
   productDetailGallery(4000)
   menuSliding()
