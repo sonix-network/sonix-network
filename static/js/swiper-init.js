@@ -31,11 +31,28 @@ window.addEventListener('load', function() {
       grid: { rows: rows, fill: 'row' },
       spaceBetween: 30,
       breakpoints: {
-        1200: { slidesPerView: bpVal(6), slidesPerGroup: bpVal(6), grid: { rows: 4, fill: 'row' } },
-        990:  { slidesPerView: bpVal(4), slidesPerGroup: bpVal(4), grid: { rows: 4, fill: 'row' } },
-        768:  { slidesPerView: bpVal(3), slidesPerGroup: bpVal(3), grid: { rows: 4, fill: 'row' } }, // ↓ rows
-        480:  { slidesPerView: bpVal(3), slidesPerGroup: bpVal(2), grid: { rows: 4, fill: 'row' } }, // ↓ rows
-},
+        '@0.00': {                            // phones (portrait-ish)
+          slidesPerView: bpVal(3),
+          slidesPerGroup: bpVal(3),
+          grid: { rows: 4, fill: 'row' }
+        },
+        '@0.75': {                            // phones (portrait-ish)
+          slidesPerView: bpVal(3),
+          slidesPerGroup: bpVal(3),
+          grid: { rows: 4, fill: 'row' }
+        },
+        '@1.00': {                            // phones (portrait-ish)
+          slidesPerView: bpVal(4),
+          slidesPerGroup: bpVal(4),
+          grid: { rows: 4, fill: 'row' }
+        },
+
+        '@1.70': {                            // tablets landscape & desktops
+          slidesPerView: bpVal(6),
+          slidesPerGroup: bpVal(6),
+          grid: { rows: 4, fill: 'row' }
+        }
+      },
       pagination: { el: clientsEl.querySelector('.swiper-pagination'), clickable: true },
     });
   }
