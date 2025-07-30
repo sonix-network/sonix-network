@@ -23,18 +23,18 @@ window.addEventListener('load', function() {
     }
 
     var clientSwiper = new Swiper(clientsEl, {
-      modules: [Swiper.Grid],
       loop: false,
       speed: paginationSpeed,
       autoplay: autoplay,
       slidesPerView: slidesPerView,
+      slidesPerGroup: slidesPerView * rows,
       grid: { rows: rows, fill: 'row' },
       spaceBetween: 30,
       breakpoints: {
-        1200: { slidesPerView: bpVal(6) },
-        990: { slidesPerView: bpVal(4) },
-        768: { slidesPerView: bpVal(2) },
-        480: { slidesPerView: 1 },
+        1200: { slidesPerView: bpVal(6), slidesPerGroup: bpVal(6) * rows },
+        990: { slidesPerView: bpVal(4), slidesPerGroup: bpVal(4) * rows },
+        768: { slidesPerView: bpVal(2), slidesPerGroup: bpVal(2) * rows },
+        480: { slidesPerView: 1, slidesPerGroup: rows },
       },
       pagination: { el: clientsEl.querySelector('.swiper-pagination'), clickable: true },
     });
