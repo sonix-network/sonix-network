@@ -27,15 +27,15 @@ window.addEventListener('load', function() {
       speed: paginationSpeed,
       autoplay: autoplay,
       slidesPerView: slidesPerView,
-      slidesPerGroup: slidesPerView * rows,
+      slidesPerGroup: slidesPerView,
       grid: { rows: rows, fill: 'row' },
-      spaceBetween: 0,
+      spaceBetween: 30,
       breakpoints: {
-        1200: { slidesPerView: bpVal(6), slidesPerGroup: bpVal(6) * rows },
-        990: { slidesPerView: bpVal(4), slidesPerGroup: bpVal(4) * rows },
-        768: { slidesPerView: bpVal(2), slidesPerGroup: bpVal(2) * rows },
-        480: { slidesPerView: 1, slidesPerGroup: rows },
-      },
+        1200: { slidesPerView: bpVal(6), slidesPerGroup: bpVal(6), grid: { rows: 4, fill: 'row' } },
+        990:  { slidesPerView: bpVal(4), slidesPerGroup: bpVal(4), grid: { rows: 4, fill: 'row' } },
+        768:  { slidesPerView: bpVal(3), slidesPerGroup: bpVal(3), grid: { rows: 4, fill: 'row' } }, // ↓ rows
+        480:  { slidesPerView: bpVal(3), slidesPerGroup: bpVal(2), grid: { rows: 4, fill: 'row' } }, // ↓ rows
+},
       pagination: { el: clientsEl.querySelector('.swiper-pagination'), clickable: true },
     });
   }
