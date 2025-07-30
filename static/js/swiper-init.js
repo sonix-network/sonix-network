@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
       slidesPerView: slidesPerView,
       slidesPerGroup: slidesPerView * rows,
       grid: { rows: rows, fill: 'row' },
-      spaceBetween: 30,
+      spaceBetween: 0,
       breakpoints: {
         1200: { slidesPerView: bpVal(6), slidesPerGroup: bpVal(6) * rows },
         990: { slidesPerView: bpVal(4), slidesPerGroup: bpVal(4) * rows },
