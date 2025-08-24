@@ -1,0 +1,11 @@
+weight: 4
+name: "Stockholm"
+icon: "fas fa-globe"
+url: ""
+description: |
+  - [Stockholm](https://www.peeringdb.com/ix/3607)
+    - [Obe Kista Gate](https://peeringdb.com/fac/5544)
+    - [Stokab KN7](https://peeringdb.com/fac/1053)
+    - [Digital Realty Stockholm](https://peeringdb.com/fac/208)
+    - [Equinix SK1](https://www.peeringdb.com/fac/156) (coming soon)
+    - [City Hosting](https://www.peeringdb.com/fac/14462)
