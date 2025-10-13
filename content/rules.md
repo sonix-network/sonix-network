@@ -6,13 +6,15 @@ keywords = ["rules"]
 
 Version: 1.4
 
+This version of the rules are effective from 2025-11-01
+
 The following rules are applicable to the following SONIX IXPs:
 
  - SONIX Stockholm
  - SONIX Gothenburg
  - SONIX Malmo
 
-By connecting to an IXP part of SONIX you acknowledge the following.
+By connecting to an IXP part of SONIX you acknowledge the following
 
 # General requirements
 
