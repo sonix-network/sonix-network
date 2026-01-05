@@ -1,3 +1,5 @@
+const TABLE_HEADERS = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation', 'IXP', 'Speed'];
+
 document.addEventListener('DOMContentLoaded', function() {
     fetchDataAndCreateTable();
     addSearchFunctionality();
@@ -49,8 +51,7 @@ function createTable(members, ixpList) {
 function createTableHead(table) {
     let thead = table.createTHead();
     let headerRow = thead.insertRow();
-    let headers = ['AS Number', 'Member Since', 'Name', 'Peering Policy', 'Colocation', 'IXP', 'Speed'];
-    headers.forEach((text, index) => {
+    TABLE_HEADERS.forEach((text, index) => {
         let th = document.createElement('th');
         th.textContent = text;
         th.setAttribute('data-sort-direction', 'asc'); // Add data attribute for sort direction
@@ -85,6 +86,7 @@ function createTableBody(table, members, ixpList) {
 
 function createTableRow(tbody, member, connection, iface, ixpList) {
     let row = tbody.insertRow();
+    let cells = [];
 
     // Make AS Number a link
     let asCell = row.insertCell();
@@ -93,26 +95,60 @@ function createTableRow(tbody, member, connection, iface, ixpList) {
     link.textContent = member.asnum;
     link.target = "_blank";
     asCell.appendChild(link);
+    cells.push(asCell);
 
     // Format the member_since date
     let memberSince = new Date(member.member_since).toISOString().split('T')[0];
-    row.insertCell().textContent = memberSince;
+    cells.push(row.insertCell());
+    cells[cells.length - 1].textContent = memberSince;
 
-    row.insertCell().textContent = member.name;
-    row.insertCell().textContent = member.peering_policy;
+    cells.push(row.insertCell());
+    let nameCell = cells[cells.length - 1];
+    nameCell.textContent = member.name;
+
+    let toggleButton = document.createElement('button');
+    toggleButton.type = 'button';
+    toggleButton.className = 'member-toggle';
+    toggleButton.textContent = 'Details';
+    toggleButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        row.classList.toggle('is-expanded');
+    });
+    nameCell.appendChild(toggleButton);
+
+    cells.push(row.insertCell());
+    cells[cells.length - 1].textContent = member.peering_policy;
 
     let colo = connection ? getColoForConnection(connection, ixpList) : 'No colocation data';
-    row.insertCell().textContent = colo;
+    cells.push(row.insertCell());
+    cells[cells.length - 1].textContent = colo;
 
     let ixpShortname = connection ? getIXPShortname(connection.ixp_id, ixpList) : 'Unknown IXP';
-    row.insertCell().textContent = ixpShortname;
+    cells.push(row.insertCell());
+    cells[cells.length - 1].textContent = ixpShortname;
 
     // Display the connection speed in Gbps
     let speedGbps = iface ? (iface.if_speed / 1000).toFixed(0) : '0';
-    row.insertCell().textContent = `${speedGbps}G`;
+    cells.push(row.insertCell());
+    cells[cells.length - 1].textContent = `${speedGbps}G`;
+
+    cells.forEach((cell, index) => {
+        cell.setAttribute('data-label', TABLE_HEADERS[index]);
+    });
+
+    let details = document.createElement('div');
+    details.className = 'member-details-inline';
+    details.innerHTML = `
+      <div><strong>Member Since</strong><span>${memberSince || '-'}</span></div>
+      <div><strong>Peering Policy</strong><span>${member.peering_policy || '-'}</span></div>
+      <div><strong>Colocation</strong><span>${colo || '-'}</span></div>
+    `;
+    nameCell.appendChild(details);
 
     return row;
 }
+
 
 function getColoForConnection(connection, ixpList) {
     let ixp = ixpList.find(ix => ix.ixp_id === connection.ixp_id);

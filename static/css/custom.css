@@ -2,6 +2,13 @@
   aspect-ratio: 16 / 3;
 }
 
+h1, h2, h3, h4, h5, h6,
+.navbar-nav > li > a,
+.btn {
+  font-family: "Space Grotesk", "Source Sans 3", sans-serif;
+  letter-spacing: 0.2px;
+}
+
 .box-image-text .image {
     min-height: 190px;
     max-height: 190px;
@@ -22,6 +29,18 @@
 
 .home-carousel h1, .home-carousel ul {
   text-transform: none;
+}
+
+.home-carousel h1 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.home-carousel h2 {
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
 .home-carousel {
@@ -107,11 +126,53 @@
 }
 
 .chart-box {
-  padding: 1.25rem;
-  margin: 1em;
+  padding: 1.5rem;
+  margin: 1.5em;
   background-color: white;
   border: 1px solid #dee2e6;
-  border-radius: 1.25rem;
+  border-radius: 1.5rem;
+}
+
+.traffic-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+
+.traffic-stat {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.traffic-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #6a6a6a;
+  margin-bottom: 6px;
+}
+
+.traffic-value {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c4a75;
+}
+
+.traffic-updated {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
 }
 
 .chart-box canvas {
@@ -171,20 +232,144 @@
    .responsive-iframe-container iframe {
         width: 50%;
   }
+
+  .responsive-iframe-container.join-form iframe {
+    width: 70%;
+    left: 0;
+    transform: none;
+  }
+}
+
+.responsive-iframe-container.join-form iframe {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .navbar-affixed-top .navbar-collapse,
+  .navbar-fixed-top .navbar-collapse {
+    max-height: none;
+  }
+
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+
+  .navbar-nav {
+    margin: 6px -15px;
+  }
+
+  .navbar-nav > li > a {
+    padding: 8px 12px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 6px 18px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  #members-table th:nth-child(2),
+  #members-table td:nth-child(2),
+  #members-table th:nth-child(4),
+  #members-table td:nth-child(4),
+  #members-table th:nth-child(5),
+  #members-table td:nth-child(5) {
+    display: none;
+  }
+
+  #members-table tr {
+    cursor: pointer;
+  }
+
+  #members-table tr.is-expanded {
+    background: #f7f9fb;
+  }
+
+  .member-toggle {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: 12px;
+    border: 1px solid #cfd6dc;
+    background: #fff;
+    border-radius: 999px;
+  }
+
+  .member-toggle:active,
+  .member-toggle:focus {
+    outline: none;
+  }
+
+
+  .member-details-inline {
+    display: none;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #e0e0e0;
+  }
+
+  #members-table tr.is-expanded .member-details-inline {
+    display: grid;
+    gap: 8px;
+  }
+
+  .member-details-inline div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .member-details-inline strong {
+    color: #555;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 768px) {
+  #members-table .member-details-inline {
+    display: none;
+  }
+
+  #members-table tr.is-expanded .member-details-inline {
+    display: none;
+  }
+
+  #members-table .member-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .member-toggle {
+    display: inline-block;
+  }
 }
 
 td, th {
   padding: 0.6em;
 }
 table {
-  border-radius: 10px;
+  border-radius: 14px;
   border: 1px solid lightgray;
   border-collapse: separate;
-  box-shadow: 10px 10px 5px lightgray;
-  margin-bottom: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  margin-bottom: 24px;
 }
 body {
   font-size: 16px;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+.btn-template-transparent-black,
+.btn-template-main {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 .icon {
   font-size: 40px;
@@ -218,10 +403,11 @@ body {
   line-height: 1.5;
 }
 
+
 .bar {
   position: relative;
   background: var(--primary-accent);
-  padding: 20px 0;
+  padding: 56px 0;
 }
 
 section, div.section {
@@ -233,7 +419,7 @@ section, div.section {
 }
 
 .bar.background-pentagon.no-mb {
-  padding: 60px 0;
+  padding: 72px 0;
 }
 
 /* Specific styles for the front page */
@@ -263,12 +449,24 @@ section, div.section {
 /* Clients carousel tweaks */
 .clients-section {
   margin-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .customers-swiper .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.customers-swiper .swiper-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
 }
 
 .customers-swiper .swiper-slide img {
@@ -291,6 +489,10 @@ section, div.section {
 .ix-location {
   text-align: center;
   margin-bottom: 20px;
+  padding: 24px 16px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
 .ix-location h4 {
@@ -323,21 +525,26 @@ section, div.section {
   margin-top: 10px;
 }
 
+.home-carousel .text-box .btn-lg {
+  font-size: 3.5rem;
+  padding: 1.2rem 2.8rem;
+}
+
 .text-box {
   background-color: rgba(70, 120, 191, 0.9); /* Semi-transparent blue overlay */
-  padding: 80px;
-  border-radius: 10px;
-  text-align: center;
+  padding: clamp(24px, 4vw, 64px);
+  border-radius: 18px;
+  text-align: left;
   color: #fff; /* White text for contrast */
   display: inline-block;
   margin-bottom: 20px;
-  max-width: 100%; /* Optional: Constrain width for better readability */
+  max-width: 720px;
 }
 
 #footer {
   background: #333;
   color: #fff;
-  padding: 40px 0;
+  padding: 56px 0 32px;
 }
 
 #footer h4 {
