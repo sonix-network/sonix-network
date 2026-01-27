@@ -1,12 +1,10 @@
 weight: 3
-name: "High-Performance Connectivity"
+name: "High-Performance Network"
 icon: "fas fa-globe"
 url: ""
 description: |
-  We provide robust and reliable connectivity solutions designed to meet your unique needs. 
+  Reliable connectivity that scales with your needs.
 
-  With 8 strategically placed locations across Sweden, we offer a range of port speeds from 10G to 400G, 
-  with all network equipment utilizing NOS SONiC. 
+  Eight locations across Sweden with 10G to 400G ports, running NOS SONiC.
 
-  Our flexible options include a variety of optics (including free 100G optics!), cross-connects tailored to your requirements, 
-  and the possibility for custom solutions. 
+  Flexible optics, cross-connects, and room for custom solutions.

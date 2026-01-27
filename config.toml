@@ -206,15 +206,15 @@ links = [
     enable = true
     icon = "fas fa-user-friends"
     title = "Join the Conversation"
-    subtitle = "Have questions about Sonix?<br><br>Join our Matrix community and connect with our team and other partners.<br>It's the best place to get your questions answered and stay up-to-date on the latest developments."
+    subtitle = "Have questions about Sonix?<br><br>Join our Matrix community to connect with the team and other partners. It's the best place to get answers and stay up to date."
     link_url = "/contact/"
     link_text = "Join the Community"
 
 [params.clients]
     enable = true
     title = "Meet our Sonix Friends"
-    subtitle = "Powering a Better Connected Sweden"
-    description = """These networks are part of the Sonix community, collaborating to build a faster, more affordable, and sustainable internet for Sweden. Learn more about our members and the different types of Sonix Friends (Facility Sponsors, Network Partners, Community Supporters) on our <a href="/members/">Members page</a>."""
+    subtitle = "Building a Better-Connected Sweden"
+    description = """These networks are part of the Sonix community, building a faster, more affordable, and more sustainable internet for Sweden. Learn more about our members and the different types of Sonix Friends on our <a href="/members/">Members page</a>."""
 
 [params.recent_posts]
     enable = false
