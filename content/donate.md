@@ -56,7 +56,20 @@ Here are some other examples of equipment we have a need for:
 - **S3-compatible storage capacity**
 
 
-{{< mailto-button text="Contact us" email="donate@sonix.network" >}}
+<div class="donate-cta-card">
+  <div class="donate-cta-icon">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 17.5v-11Zm2.3-.5 7.2 4.8c.3.2.7.2 1 0L19.7 6H4.3Zm15.7 2.2-6.7 4.5a2.7 2.7 0 0 1-2.6 0L4 8.2V17.5c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V8.2Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="donate-cta-content">
+    <h3>Questions about donating?</h3>
+    <p>Email us and we’ll help you find the best way to contribute.</p>
+  </div>
+  <a class="btn btn-template-transparent-black btn-lg donate-cta-button" href="mailto:donate@sonix.network">
+    donate@sonix.network
+  </a>
+</div>
 
 
 Thank you for your support!

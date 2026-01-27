@@ -129,7 +129,7 @@ enableGitInfo = true
 
     style = "blue"
 
-    copyright = "Copyright © SONIX 2024. All rights reserved."
+    copyright = "Copyright © SONIX 2026. All rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
@@ -212,9 +212,9 @@ links = [
 
 [params.clients]
     enable = true
-    title = "Meet our Sonix Friends"
+    title = "Meet our Members"
     subtitle = "Building a Better-Connected Sweden"
-    description = """These networks are part of the Sonix community, building a faster, more affordable, and more sustainable internet for Sweden. Learn more about our members and the different types of Sonix Friends on our <a href="/members/">Members page</a>."""
+    description = """These networks are part of the Sonix community, building a faster, more affordable, and more sustainable internet for Sweden. Learn more about our members and the different member types on our <a href="/members/">Members page</a>."""
 
 [params.recent_posts]
     enable = false

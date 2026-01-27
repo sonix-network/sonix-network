@@ -1,9 +1,10 @@
 weight: 2
-name: "Sustainable by Default"
+name: "Green by Design"
 icon: "fas fa-recycle"
 url: ""
 description: |
-  Sonix is a green IXP committed to sustainable practices.
-  Our core network runs on open-source software and refurbished hardware to reduce e-waste.
+  Efficient hardware and optics from day one.
 
-  When you peer with Sonix, you support a cleaner, more efficient internet.
+  Reuse first, replace last to cut e-waste.
+
+  Lower power per bit without tradeoffs.
