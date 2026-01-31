@@ -1,0 +1,8 @@
+weight: 5
+name: "Gothenburg"
+icon: "fas fa-globe"
+url: ""
+description: |
+  - [Gothenburg](https://www.peeringdb.com/ix/3745)
+    - [Gothnet DC Marieholm](https://peeringdb.com/fac/434)
+    - [Gothnet DC Backa](https://peeringdb.com/fac/9308)
