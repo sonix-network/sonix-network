@@ -592,6 +592,12 @@ section, div.section {
   max-width: 720px;
 }
 
+@media (min-width: 992px) {
+  .home-carousel .text-box {
+    max-width: 900px;
+  }
+}
+
 #footer {
   background: #333;
   color: #fff;
