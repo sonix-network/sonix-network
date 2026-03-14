@@ -73,22 +73,35 @@ We use MTU 9000.
 
 As long as it's settlement-free peering. E.g. free IPv6 transit is OK.
 
-### What media do you support?
+### Which media do you support?
 
-We are prepared to quickly connect the following medias:
+Media support differs by site. The table below shows our standard supported
+options.
 
 <div style="margin-left: 10px">
 
-|          | Transceivers                               |
-|----------|--------------------------------------------|
-| **400G** | 400GBASE-LR4, 400GBASE-FR4                 |
-| **200G** | 200GBASE-LR4, 200GBASE-FR4                 |
-| **100G** | 100GBASE-CWDM4, 100GBASE-LR4, 100GBASE-LR1 |
-| **50G**  | 50GBASE-LR, 50GBASE-ER                     |
-| **40G**  | 40GBASE-LR4                                |
-| **25G**  | 25GBASE-LR                                 |
-| **10G**  | 10GBASE-LR                                 |
+| Optic            | <abbr title="Obenet Riverlake">RL</abbr> | <abbr title="Obenet Kista Gate">KG</abbr> | <abbr title="Digital Realty STO1">IXN</abbr> | <abbr title="Equinix SK1">SK1</abbr> | <abbr title="Stokab KN7">KN7</abbr> | <abbr title="Equinix SK2">SK2</abbr> | <abbr title="City Hosting">CH</abbr> | <abbr title="Gothenburg: Gothnet DC Marieholm, Gothnet DC Backa">SHG5</abbr> | <abbr title="Malmö Vastergatan 4">VG4</abbr> |
+|------------------|----|----|-----|-----|-----|-----|----|------|-----|
+| **400GBASE-LR4** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> |
+| **400GBASE-FR4** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> |
+| **200GBASE-LR4** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> |
+| **200GBASE-FR4** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> |
+| **100GBASE-CWDM4** | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **100GBASE-LR4** | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **100GBASE-LR1** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **50GBASE-LR** | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **50GBASE-ER** | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **40GBASE-LR4** | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #dc3545;">&#10007;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **25GBASE-LR** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
+| **10GBASE-LR** | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> | <span style="color: #198754;">&#10003;</span> |
 
+</div>
+
+<div style="margin: 10px 0 0 10px; font-size: 0.95em;">
+<strong>Site legend:</strong> RL = Obenet Riverlake, KG = Obenet Kista Gate,
+IXN = Digital Realty STO1, SK1 = Equinix SK1, KN7 = Stokab KN7, SK2 = Equinix
+SK2, CH = City Hosting, SHG5 = Gothenburg (Gothnet DC Marieholm, Gothnet DC
+Backa), VG4 = Malmö Vastergatan 4.
 </div>
 
 Having trouble choosing? 100GBASE-CWDM4 is a good choice as 100G equipment is easy
@@ -96,7 +109,7 @@ to come by and we have plent of modules in stock. So many modules in fact that
 we are offering them free of charge.
 
 Require something else? As long as it is between 10G-400G chances
-are that we can find a solution that fits. Contact us!
+are that we can find a solution that fits. [Contact us](/contact/)!
 
 ### Bring your own transceiver (BYOT) allowed?
 
