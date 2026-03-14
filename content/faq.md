@@ -8,7 +8,7 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 ### How much does a port cost?
 
-Nothing! All ports are currently for free. No setup cost, no monthly recurring cost.
+Nothing! All ports are currently free. No setup cost, no monthly recurring cost.
 
 {{< notice note >}}
 Think of the **port price** as the price to allocate a port in our equipment
@@ -21,7 +21,7 @@ but not on SONIX.
 Compared to a conventional Internet Exchange, then yes.
 
 However, as you may know, extra costs to connect to your port may occur
-outside of our control. For example, certain locations requires a one-time fee
+outside our control. For example, certain locations require a one-time fee
 to cover our sponsors ODF cost, and as usual you need to check with your
 datacenter sales contact what they charge to provide you with the fiber
 connection to our port.
@@ -63,7 +63,7 @@ as adding redundancy in the Stockholm location.
 We recommend:
 
 - Ensure you are compliant with our [rules](/rules/).
-- Setting the BGP timers to 3 second Keepalive and 9 second Hold. This helps in the event of a forwarding failure.
+- Setting the BGP timers to a 3-second Keepalive and 9-second Hold. This helps in the event of a forwarding failure.
 
 ### What MTU is used?
 
@@ -92,10 +92,10 @@ We are prepared to quickly connect the following medias:
 </div>
 
 Having trouble choosing? 100GBASE-CWDM4 is a good choice as 100G equipment is easy
-to come by and we have plent of modules in stock. So many modules in fact that
+to come by and we have plenty of modules in stock. So many modules in fact that
 we are offering them free of charge.
 
-Require something else? As long as it is between 10G-400G chances
+Require something else? As long as it is between 10G and 400G, chances
 are that we can find a solution that fits. Contact us!
 
 ### Bring your own transceiver (BYOT) allowed?
@@ -105,7 +105,7 @@ Yes! If it's QSFP28 or QSFP+ compatible. For 400G we support QSFP-DD.
 ### Got any transceivers I can use in my own equipment to connect to SONIX?
 
 Yes! We have 100GBASE-CWDM4 we can give you free of charge, and we are happy to
-provide other transceivers at cost price.
+provide other transceivers at cost.
 
 ### Why do you have sites that are invite only?
 
@@ -113,7 +113,7 @@ It boils down to what connectivity we can manage to secure from our sponsors.
 If a site is known to have large networks, we need to be selective on which
 networks we on-board.
 
-Want to help? Have a lookt at our [donation](/donate/) page to see what kind
+Want to help? Have a look at our [donation](/donate/) page to see what kind
 of equipment we need to make the site better.
 
 ### Can I use your metrics for my own monitoring?
