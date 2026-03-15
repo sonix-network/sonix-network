@@ -1,6 +1,6 @@
 +++
 title = "Exclusive SONIX 100GBASE-CWDM4 Module"
-description = "Discover the features of the SONIX 100GBASE-CWDM4 giveaway module you have recieved"
+description = "Discover the features of the SONIX 100GBASE-CWDM4 giveaway module you have received"
 +++
 
 # Congratulations! 
@@ -16,7 +16,7 @@ If you're here, you've discovered the QR code on our 100GBASE-CWDM4 module which
 - **RS-FEC Required:** RS-FEC (Reed-Solomon Forward Error Correction) also known as CL91 (Clause 91) needs to be supported and enabled in your switch.
 
 ### Explore More and Get Involved
-- **Join SONIX:** Use the module you have recieved to connect to our internet exchange by [signing up](https://forms.gle/xJ5CXbSWk8snzgND9).
+- **Join SONIX:** Use the module you have received to connect to our internet exchange by [signing up](http://sonix.network/join/).
 
 - **Learn About Donations:** Your support is crucial. Visit our [donation page](/donate/) to see how you can help us continue to provide and improve these technologies.
 
