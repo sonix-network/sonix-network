@@ -6,6 +6,14 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 # Frequently Asked Questions
 
+Jump to:
+[Port Cost](#how-much-does-a-port-cost) ·
+[Free Ports](#wow-is-everything-really-free) ·
+[Route Servers](#do-you-have-route-servers) ·
+[Media Support](#which-media-do-you-support) ·
+[BYOT](#bring-your-own-transceiver-byot-allowed) ·
+[SONIX Transceivers](#got-any-transceivers-i-can-use-in-my-own-equipment-to-connect-to-sonix)
+
 ### How much does a port cost?
 
 Nothing! All ports are currently free. No setup cost, no monthly recurring cost.
