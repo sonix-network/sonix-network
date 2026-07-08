@@ -1,7 +1,7 @@
 baseurl = "https://sonix.network/"
 title = "SONIX"
 theme = "hugo-universal-theme"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 summaryLength = 70
 enableGitInfo = true
@@ -143,7 +143,7 @@ enableGitInfo = true
 
     disqusShortname = ""
 [permalinks]
-    posts = "/posts/:year/:month/:day/:filename/"
+    posts = "/posts/:year/:month/:day/:contentbasename/"
 
 [params.topbar]
     enable = false

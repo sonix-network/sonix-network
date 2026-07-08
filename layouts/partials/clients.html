@@ -1,7 +1,7 @@
 {{ if isset .Site.Params "clients" }}
 {{ if .Site.Params.clients.enable }}
-{{ if isset .Site.Data "clients" }}
-{{ if gt (len .Site.Data.clients) 0 }}
+{{ if isset hugo.Data "clients" }}
+{{ if gt (len hugo.Data.clients) 0 }}
 <section class="background-white clients-section">
     <div class="container">
         <div class="row">
@@ -25,7 +25,7 @@
                   data-pagination-speed="{{ default 1000 .Site.Params.CarouselCustomers.pagination_speed }}">
                   <div class="swiper-pagination"></div>
                   <div class="swiper-wrapper">
-                  {{ range .Site.Data.clients }}
+                  {{ range hugo.Data.clients }}
                     <div class="swiper-slide" title="{{ .name }}">
                         <div class="image-container">
                             {{ if .url }}
