@@ -1,7 +1,7 @@
 baseurl = "https://sonix.network/"
 title = "SONIX"
 theme = "hugo-universal-theme"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 summaryLength = 70
 enableGitInfo = true

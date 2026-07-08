@@ -1,5 +1,5 @@
 {{ if default true .Site.Params.CarouselHomepage.enable }}
-{{ if gt (len .Site.Data.carousel) 0 }}
+{{ if gt (len hugo.Data.carousel) 0 }}
 <section>
     <div class="home-carousel">
         {{ $valid_video := print "static/img/banner.mp4" | fileExists }}
@@ -14,7 +14,7 @@
                 data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
                 data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
                 <div class="swiper-wrapper">
-                    {{ range sort .Site.Data.carousel "weight" }}
+                    {{ range sort hugo.Data.carousel "weight" }}
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="container-fluid">
