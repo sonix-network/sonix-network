@@ -1,0 +1,27 @@
+{{ with hugo.Data.sponsors }}
+<section class="sponsors-section" aria-labelledby="sponsors-heading">
+    <div class="container">
+        <div class="heading text-center">
+            <h2 id="sponsors-heading">Thanks to our Sponsors</h2>
+        </div>
+        <div class="sponsors-panel">
+            <ul class="sponsors-grid" role="list">
+                {{ range . }}
+                    {{ $sponsor := . }}
+                    {{ with .member }}
+                        {{ $sponsor = merge (index hugo.Data.clients .) $sponsor }}
+                    {{ end }}
+                    <li>
+                        <a class="sponsor-card" href="{{ $sponsor.url }}">
+                            <span class="sponsor-logo{{ if $sponsor.dark_logo_background }} sponsor-logo-dark{{ end }}">
+                                <img src="{{ $sponsor.image | relURL }}" alt="">
+                            </span>
+                            <span>{{ $sponsor.name }}</span>
+                        </a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ end }}
